@@ -56,6 +56,7 @@
         "max_rows": 100
       },
       "route": [
+        "@item:0",
         "cross"
       ],
       "hub_tab": 0.7054176072234764,
@@ -106,8 +107,7 @@
       ],
       "hub_tab": 0.3560126582278481,
       "route": [
-        "@top",
-        "down",
+        "@item:1",
         "cross"
       ],
       "route_taught": true,
@@ -133,10 +133,7 @@
       ],
       "hub_tab": 0.3560126582278481,
       "route": [
-        "@top",
-        "down",
-        "down",
-        "down",
+        "@item:3",
         "cross"
       ],
       "route_taught": true,
@@ -179,9 +176,7 @@
       ],
       "hub_tab": 0.3560126582278481,
       "route": [
-        "@top",
-        "down",
-        "down",
+        "@item:2",
         "cross"
       ],
       "route_taught": true,
@@ -207,11 +202,7 @@
       ],
       "hub_tab": 0.3560126582278481,
       "route": [
-        "@top",
-        "down",
-        "down",
-        "down",
-        "down",
+        "@item:4",
         "cross"
       ],
       "route_taught": true,
@@ -243,12 +234,7 @@
       ],
       "hub_tab": 0.3560126582278481,
       "route": [
-        "@top",
-        "down",
-        "down",
-        "down",
-        "down",
-        "down",
+        "@item:5",
         "cross"
       ],
       "route_taught": true

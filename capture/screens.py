@@ -25,8 +25,10 @@ REGION_MATCH = 0.02              # at most this fraction changed = same region
 MAX_BACK = 8                     # Circle presses allowed when backing out to the hub
 ARRIVE_WAIT = 8.0                # seconds a screen may take to load after its route
 HUB_WAIT = 3.0                  # seconds to wait for the hub to fade in before pressing again
-MAX_MENU = 12                    # Up presses allowed when resetting a hub menu's cursor
-MENU_BOX = [0.02, 0.19, 0.30, 0.60]  # the hub's left-hand menu list
+MAX_MENU = 12                    # presses allowed when moving a hub menu's cursor
+MENU_BOX = [0.02, 0.19, 0.30, 0.72]  # the hub's left-hand menu list (up to 8 items)
+MENU_FIRST = 0.236               # centre of the first menu item (picture fraction)
+MENU_STEP = 0.0625               # spacing between menu items
 MAX_TABS = 10                   # L1/R1 presses allowed when picking a hub tab
 HIGHLIGHT_LEVEL = 200            # grey level of the selected tab's white box
 MIN_HIGHLIGHT = 0.03             # narrowest highlight, as a fraction of the tab bar
@@ -86,6 +88,19 @@ def highlight_span(img: Image.Image, box):
     if best is None or best[1] - best[0] < MIN_HIGHLIGHT * g.shape[1]:
         return None
     return best[0] / g.shape[1], best[1] / g.shape[1]
+
+
+def menu_index(frame: Image.Image) -> int | None:
+    """Which item of the hub's left-hand menu is highlighted (0 = top), from where its
+    white bar sits. Items are evenly spaced in every hub menu."""
+    w, h = frame.size
+    l, t, r, b = MENU_BOX
+    g = np.asarray(frame.crop((int(l * w), int(t * h), int(r * w), int(b * h))).convert("L"))
+    rows = np.nonzero((g > HIGHLIGHT_LEVEL).mean(axis=1) > 0.5)[0]
+    if rows.size == 0:
+        return None
+    y = t + rows.mean() / g.shape[0] * (b - t)     # bar centre, as a fraction of the picture
+    return round((y - MENU_FIRST) / MENU_STEP)
 
 
 def _coarse(img: Image.Image, box) -> np.ndarray:
@@ -149,6 +164,22 @@ class Navigator:
             self.s.press("circle")
         raise RuntimeError("Couldn't get back to the Dynasty hub by pressing Circle.")
 
+    def select_menu_item(self, want: int):
+        """Move the hub's left-hand menu cursor to item `want` (0 = top).
+
+        The menu wraps (Up on the top item jumps to the bottom), so we read which item
+        is highlighted and step towards the target instead of pressing Up to an edge.
+        """
+        for _ in range(MAX_MENU):
+            frame, fk = self.s.settle(box=MENU_BOX)
+            at = menu_index(frame)
+            if at is None:
+                raise RuntimeError("Couldn't find the highlighted menu item.")
+            if at == want:
+                return self.s.settle()
+            self.s.press_and_wait("down" if want > at else "up", fk, MENU_BOX)
+        raise RuntimeError(f"Couldn't reach menu item {want}.")
+
     def goto(self, name: str):
         screen = self.cfg["screens"][name]
         if not screen.get("route_taught"):
@@ -165,15 +196,8 @@ class Navigator:
         else:
             raise RuntimeError(f"Couldn't select the hub tab for '{name}'.")
         for button in screen["route"]:
-            if button == "@top":                       # menus remember their cursor: reset it
-                _, mk = self.s.settle(box=MENU_BOX)
-                stuck = 0
-                for _ in range(MAX_MENU):
-                    moved, frame, mk = self.s.press_and_wait("up", mk, MENU_BOX)
-                    stuck = 0 if moved else stuck + 1
-                    if stuck >= 2:
-                        break
-                frame, fk = self.s.settle()
+            if button.startswith("@item:"):           # pick a hub menu item by position
+                frame, fk = self.select_menu_item(int(button.split(":")[1]))
                 continue
             _, frame, fk = self.s.press_and_wait(button, fk)
         # Screens load for a moment after the last press; keep checking until it matches.
