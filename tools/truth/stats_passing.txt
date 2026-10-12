@@ -1,0 +1,13 @@
+# Hand-checked values of stats_passing.png table body (NAME POS then stat columns)
+C.Easy QB 2 34 48 70% 877 10 20.8 2 4.2 5.0
+A.Schobel QB 2 47 66 71% 704 6 9.1 0 0.0 6.0
+D.Bell QB 2 49 76 64% 641 7 9.2 6 7.9 1.2
+K.Francis QB 2 38 72 52% 519 1 1.4 0 0.0 1.0
+D.Mestemaker QB 2 32 54 59% 483 4 7.4 3 5.6 1.3
+J.Mason QB 1 32 42 76% 442 4 9.5 0 0.0 4.0
+G.Lawless QB 2 40 69 57% 440 3 4.3 6 8.7 0.5
+G.Adamson QB 1 28 45 62% 432 3 6.7 2 4.4 1.5
+E.Holstein QB 1 36 42 85% 422 5 11.9 0 0.0 5.0
+D.Lauter QB 1 26 36 72% 412 2 5.6 1 2.8 2.0
+J.Magwood QB 1 29 43 67% 402 2 4.7 1 2.3 2.0
+K.Jackson QB 1 25 33 75% 396 2 6.1 1 3.0 2.0
