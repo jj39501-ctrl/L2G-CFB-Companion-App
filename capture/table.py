@@ -58,6 +58,10 @@ class TableWalker:
         max_rows = spec.get("max_rows")
         self.max_scroll = None if max_rows is None else max(max_rows - self.rows_per_page - 1, 0)
         self.max_presses = max_presses
+        # Watch the table panel (header + rows) for responses to presses, not the whole
+        # picture: the background can animate. Column-cursor moves show in the header.
+        l, t, r, b = self.body_box
+        self.watch = spec.get("watch_box", [l, max(t - 0.13, 0), r, b])
 
     def _bk(self, frame):
         return body_key(frame, self.body_box)
@@ -67,11 +71,11 @@ class TableWalker:
         for button in ("up", "left") if self.horizontal else ("up",):
             stuck = 0
             for _ in range(self.max_presses):
-                moved, _, fk = self.s.press_and_wait(button, fk)
+                moved, _, fk = self.s.press_and_wait(button, fk, self.watch)
                 stuck = 0 if moved else stuck + 1
                 if stuck >= STUCK_LIMIT:
                     break
-        return self.s.settle()
+        return self.s.settle(box=self.watch)
 
     def vertical_pass(self, direction, frame, fk):
         """Scroll one way to the end, collecting a frame per screenful (top first)."""
@@ -81,7 +85,7 @@ class TableWalker:
         for _ in range(self.max_presses):
             if direction == "down" and self.max_scroll is not None and total >= self.max_scroll:
                 break                                  # seen max_rows rows
-            moved, frame, fk = self.s.press_and_wait(direction, fk)
+            moved, frame, fk = self.s.press_and_wait(direction, fk, self.watch)
             if not moved:
                 stuck += 1
                 if stuck >= STUCK_LIMIT:
@@ -107,7 +111,7 @@ class TableWalker:
         bk = self._bk(frame)
         scrolled, stuck = 0, 0
         for _ in range(self.max_presses):
-            moved, frame, fk = self.s.press_and_wait("right", fk)
+            moved, frame, fk = self.s.press_and_wait("right", fk, self.watch)
             if not moved:
                 stuck += 1
                 if stuck >= STUCK_LIMIT:
@@ -125,7 +129,7 @@ class TableWalker:
     def walk(self, out_dir: Path, max_cols: int = 20) -> list[Path]:
         """Capture the whole table into out_dir as colNN_rowMM.png. Returns the files."""
         out_dir.mkdir(parents=True, exist_ok=True)
-        frame, fk = self.s.settle()
+        frame, fk = self.s.settle(box=self.watch)
         frame, fk = self.go_home(fk)
         files, direction = [], "down"
         for col in range(max_cols):

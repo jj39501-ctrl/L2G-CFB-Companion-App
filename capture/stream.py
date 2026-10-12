@@ -27,7 +27,14 @@ def key_for(name: str):
     return getattr(Key, name) if len(name) > 1 else name
 
 
-def frame_key(frame: Image.Image) -> np.ndarray:
+def frame_key(frame: Image.Image, box=None) -> np.ndarray:
+    """Downscaled greyscale of the frame, or of just `box` (picture fractions). Watching
+    only the part a button affects keeps hub background animation from looking like a
+    response."""
+    if box is not None:
+        w, h = frame.size
+        l, t, r, b = box
+        frame = frame.crop((int(l * w), int(t * h), int(r * w), int(b * h)))
     g = frame.convert("L")
     g = g.resize((g.width // 4, g.height // 4))
     return np.asarray(g, dtype=np.int16)
@@ -59,26 +66,28 @@ class Stream:
         time.sleep(hold)
         self.kb.release(key)
 
-    def settle(self, frame=None):
-        """Keep grabbing until the screen holds still for SETTLE_QUIET. Returns (frame, fkey)."""
+    def settle(self, frame=None, box=None):
+        """Keep grabbing until the screen (or `box`) holds still for SETTLE_QUIET.
+        Returns (frame, key of box)."""
         if frame is None:
             frame = self.grab()
-        fk = frame_key(frame)
+        fk = frame_key(frame, box)
         deadline = time.time() + SETTLE_TIMEOUT
         quiet_since = time.time()
         while time.time() < deadline and time.time() - quiet_since < SETTLE_QUIET:
             time.sleep(POLL)
             cur = self.grab()
-            ck = frame_key(cur)
+            ck = frame_key(cur, box)
             if frame_diff(ck, fk) > FRAME_CHANGED:
                 quiet_since = time.time()
             frame, fk = cur, ck
         return frame, fk
 
-    def press_and_wait(self, button: str, fk):
+    def press_and_wait(self, button: str, fk, box=None):
         """Press, then wait for the stream to show the result.
 
-        Returns (moved, frame, fkey). moved=False means nothing changed on screen.
+        fk must be a key of the same `box`. Returns (moved, frame, key).
+        moved=False means nothing changed (within `box`, if given).
         """
         self.press(button)
         deadline = time.time() + CHANGE_TIMEOUT
@@ -86,7 +95,7 @@ class Stream:
         while time.time() < deadline:
             time.sleep(POLL)
             cur = self.grab()
-            ck = frame_key(cur)
+            ck = frame_key(cur, box)
             if frame_diff(ck, fk) > FRAME_CHANGED:
-                return (True, *self.settle(cur))
+                return (True, *self.settle(cur, box))
         return False, cur, ck

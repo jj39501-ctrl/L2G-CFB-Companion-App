@@ -25,6 +25,8 @@ REGION_MATCH = 0.02              # at most this fraction changed = same region
 MAX_BACK = 8                     # Circle presses allowed when backing out to the hub
 ARRIVE_WAIT = 8.0                # seconds a screen may take to load after its route
 HUB_WAIT = 3.0                  # seconds to wait for the hub to fade in before pressing again
+MAX_MENU = 12                    # Up presses allowed when resetting a hub menu's cursor
+MENU_BOX = [0.02, 0.19, 0.30, 0.60]  # the hub's left-hand menu list
 MAX_TABS = 10                   # L1/R1 presses allowed when picking a hub tab
 HIGHLIGHT_LEVEL = 200            # grey level of the selected tab's white box
 MIN_HIGHLIGHT = 0.03             # narrowest highlight, as a fraction of the tab bar
@@ -164,10 +166,14 @@ class Navigator:
             raise RuntimeError(f"Couldn't select the hub tab for '{name}'.")
         for button in screen["route"]:
             if button == "@top":                       # menus remember their cursor: reset it
+                _, mk = self.s.settle(box=MENU_BOX)
                 stuck = 0
-                while stuck < 2:
-                    moved, frame, fk = self.s.press_and_wait("up", fk)
+                for _ in range(MAX_MENU):
+                    moved, frame, mk = self.s.press_and_wait("up", mk, MENU_BOX)
                     stuck = 0 if moved else stuck + 1
+                    if stuck >= 2:
+                        break
+                frame, fk = self.s.settle()
                 continue
             _, frame, fk = self.s.press_and_wait(button, fk)
         # Screens load for a moment after the last press; keep checking until it matches.
