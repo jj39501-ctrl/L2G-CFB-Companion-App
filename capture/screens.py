@@ -7,6 +7,7 @@ taught key presses and check the screen title against a reference image.
 """
 
 import json
+import time
 from pathlib import Path
 
 import numpy as np
@@ -22,7 +23,8 @@ REFS = ROOT / "refs"
 REGION_DELTA = 40                # grey-level change that counts as a changed pixel
 REGION_MATCH = 0.02              # at most this fraction changed = same region
 MAX_BACK = 8                     # Circle presses allowed when backing out to the hub
-MAX_TABS = 10                    # L1/R1 presses allowed when picking a hub tab
+HUB_WAIT = 3.0                   # seconds to wait for the hub to fade in before pressing again
+MAX_TABS = 10                   # L1/R1 presses allowed when picking a hub tab
 HIGHLIGHT_LEVEL = 200            # grey level of the selected tab's white box
 MIN_HIGHLIGHT = 0.03             # narrowest highlight, as a fraction of the tab bar
 TAB_TOLERANCE = 0.03             # how close two highlight centres must be to be one tab
@@ -129,12 +131,19 @@ class Navigator:
         """Back out (Circle) until the hub shows. Returns (frame, fkey, tab centre)."""
         if self.hub_ref is None:
             raise RuntimeError("The hub hasn't been taught yet. Run: python -m capture teach hub")
-        frame, fk = self.s.settle()
         for _ in range(MAX_BACK + 1):
-            tab = self.hub_tab(frame)
-            if tab is not None:
-                return frame, fk, tab
-            _, frame, fk = self.s.press_and_wait("circle", fk)
+            # Menus fade in after a transition, so give the hub a moment to appear
+            # before pressing Circle again (an extra Circle on the hub could open a prompt).
+            deadline = time.time() + HUB_WAIT
+            while True:
+                frame, fk = self.s.settle()
+                tab = self.hub_tab(frame)
+                if tab is not None:
+                    return frame, fk, tab
+                if time.time() > deadline:
+                    break
+                time.sleep(0.3)
+            self.s.press("circle")
         raise RuntimeError("Couldn't get back to the Dynasty hub by pressing Circle.")
 
     def goto(self, name: str):

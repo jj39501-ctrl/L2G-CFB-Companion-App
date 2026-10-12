@@ -98,6 +98,16 @@ class Keys:
             self.q.get()
 
 
+def _wait_for_hub(stream: Stream, nav, timeout=8.0):
+    """Hub tab centre once the hub is showing (menus fade in after transitions), or None."""
+    deadline = time.time() + timeout
+    while True:
+        tab = nav.hub_tab(stream.settle()[0])
+        if tab is not None or time.time() > deadline:
+            return tab
+        time.sleep(0.3)
+
+
 def teach_hub(stream: Stream, cfg: dict):
     with Keys() as keys:
         print("In chiaki-ng, go to the Dynasty hub (the screen with the L1/R1 tab bar:\n"
@@ -126,7 +136,7 @@ def teach_screen(stream: Stream, cfg: dict, name: str):
     with Keys() as keys:
         print(f"Teaching '{name}'.\nIn chiaki-ng, go to the Dynasty hub (any tab), then press F8.")
         keys.wait_mark()
-        tab = nav.hub_tab(stream.settle()[0])
+        tab = _wait_for_hub(stream, nav)
         if tab is None:
             raise SystemExit("That doesn't look like the Dynasty hub. Run 'teach hub' again if "
                              "the hub has changed.")
@@ -144,7 +154,7 @@ def teach_screen(stream: Stream, cfg: dict, name: str):
         back_key = None
         while (key := keys.next()) != MARK:
             back_key = back_key or key
-        if nav.hub_tab(stream.settle()[0]) is None:
+        if _wait_for_hub(stream, nav) is None:
             print("  warning: that doesn't look like the hub; Circle mapping not saved.")
         elif back_key and back_key not in PS_NAMES:
             cfg["keymap"]["circle"] = back_key
