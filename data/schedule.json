@@ -1,0 +1,968 @@
+{
+ "screen": "schedule",
+ "captured_at": "2026-10-11T23:22:28",
+ "source": "2026-10-11_230902",
+ "data": [
+  {
+   "week": "Week 2",
+   "scope": "National",
+   "games": [
+    {
+     "away": "Appalachian State",
+     "away_rank": null,
+     "home": "Pittsburgh",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Wed, Sep 8",
+     "time": "8:00 PM",
+     "final": null
+    },
+    {
+     "away": "Hawai'i",
+     "away_rank": null,
+     "home": "Kansas",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Wed, Sep 8",
+     "time": "9:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "Memphis",
+     "home_rank": 24,
+     "neutral": false,
+     "date": "Fri, Sep 10",
+     "time": "9:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": 7,
+     "home": "Eastern Michigan",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "12:00 PM",
+     "final": null
+    },
+    {
+     "away": "Nevada",
+     "away_rank": 7,
+     "home": "Wisconsin",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "12:00 PM",
+     "final": null
+    },
+    {
+     "away": "Florida State",
+     "away_rank": null,
+     "home": "Penn State",
+     "home_rank": 16,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "12:00 PM",
+     "final": null
+    },
+    {
+     "away": "Louisville",
+     "away_rank": 15,
+     "home": "Auburn",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "12:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Arkansas State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "12:30 PM",
+     "final": null
+    },
+    {
+     "away": "Tulsa",
+     "away_rank": null,
+     "home": "Florida Atlantic",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "12:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "Buffalo",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "Texas Tech",
+     "away_rank": 8,
+     "home": "Miami",
+     "home_rank": 13,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "Iowa",
+     "away_rank": 7,
+     "home": "Iowa State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "Iowa",
+     "away_rank": 7,
+     "home": "Iowa State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "USC",
+     "away_rank": 3,
+     "home": "Georgia",
+     "home_rank": 3,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "UTEP",
+     "away_rank": null,
+     "home": "Houston",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "Michigan State",
+     "away_rank": null,
+     "home": "Old Dominion",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "West Virginia",
+     "away_rank": null,
+     "home": "TCU",
+     "home_rank": 2,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:00 PM",
+     "final": null
+    },
+    {
+     "away": "Northern Illinois",
+     "away_rank": null,
+     "home": "Southern Mississippi",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:30 PM",
+     "final": null
+    },
+    {
+     "away": "Rice",
+     "away_rank": null,
+     "home": "Utah",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "Miami University",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "1:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Oregon State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "Marshall",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "Colorado State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:15 PM",
+     "final": null
+    },
+    {
+     "away": "Sam Houston",
+     "away_rank": 4,
+     "home": "Charlotte",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:15 PM",
+     "final": null
+    },
+    {
+     "away": "Sam Houston",
+     "away_rank": null,
+     "home": "Charlotte",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:15 PM",
+     "final": null
+    },
+    {
+     "away": "Ball State",
+     "away_rank": null,
+     "home": "Minnesota",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:15 PM",
+     "final": null
+    },
+    {
+     "away": "Boise State",
+     "away_rank": 12,
+     "home": "Vanderbilt",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:15 PM",
+     "final": null
+    },
+    {
+     "away": "James Madison",
+     "away_rank": null,
+     "home": "Illinois",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "Texas A&M",
+     "home_rank": 14,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": 7,
+     "home": "SMU",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "2:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "Oregon",
+     "home_rank": 6,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": null,
+     "final": {
+      "winner": "ORE",
+      "winner_score": 88,
+      "loser": "FCSE",
+      "loser_score": 3
+     }
+    },
+    {
+     "away": "Toledo",
+     "away_rank": null,
+     "home": "South Carolina",
+     "home_rank": 4,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": null,
+     "final": {
+      "winner": "SCAR",
+      "winner_score": 32,
+      "loser": "TOL",
+      "loser_score": 13
+     }
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "USF",
+     "home_rank": 7,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": 7,
+     "home": "LSU",
+     "home_rank": 5,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:00 PM",
+     "final": null
+    },
+    {
+     "away": "North Carolina",
+     "away_rank": null,
+     "home": "Bowling Green",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": null,
+     "home": "Western Kentucky",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": null,
+     "home": "Western Kentucky",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:00 PM",
+     "final": null
+    },
+    {
+     "away": "Sacramento State",
+     "away_rank": null,
+     "home": "Louisiana Tech",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:15 PM",
+     "final": null
+    },
+    {
+     "away": "NC State",
+     "away_rank": null,
+     "home": "East Carolina",
+     "home_rank": 2,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:15 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "UMass",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:15 PM",
+     "final": null
+    },
+    {
+     "away": "Ohio State",
+     "away_rank": 1,
+     "home": "Indiana",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Jacksonville State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "Coastal Carolina",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "3:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "Western Michigan",
+     "home_rank": 2,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "4:00 PM",
+     "final": null
+    },
+    {
+     "away": "Central Michigan",
+     "away_rank": null,
+     "home": "Temple",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "4:00 PM",
+     "final": null
+    },
+    {
+     "away": "Kent State",
+     "away_rank": null,
+     "home": "Kentucky",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "4:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": 7,
+     "home": "Colorado",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:00 PM",
+     "final": null
+    },
+    {
+     "away": "Rutgers",
+     "away_rank": null,
+     "home": "Missouri",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:00 PM",
+     "final": null
+    },
+    {
+     "away": "Rutgers",
+     "away_rank": null,
+     "home": "Missouri",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Purdue",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "Kansas State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:00 PM",
+     "final": null
+    },
+    {
+     "away": "Nebraska",
+     "away_rank": 11,
+     "home": "Mississippi State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:00 PM",
+     "final": null
+    },
+    {
+     "away": "Oklahoma",
+     "away_rank": 19,
+     "home": "Ole Miss",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:00 PM",
+     "final": null
+    },
+    {
+     "away": "Alabama",
+     "away_rank": 10,
+     "home": "Notre Dame",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:45 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Georgia State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:45 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": 7,
+     "home": "Texas",
+     "home_rank": 2,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": null,
+     "final": {
+      "winner": "TEX",
+      "winner_score": 38,
+      "loser": "FCSMW",
+      "loser_score": 14
+     }
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Akron",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:45 PM",
+     "final": null
+    },
+    {
+     "away": "San Diego State",
+     "away_rank": null,
+     "home": "Duke",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:45 PM",
+     "final": null
+    },
+    {
+     "away": "Cincinnati",
+     "away_rank": null,
+     "home": "UConn",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "5:45 PM",
+     "final": null
+    },
+    {
+     "away": "Louisiana",
+     "away_rank": null,
+     "home": "North Dakota State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:00 PM",
+     "final": null
+    },
+    {
+     "away": "Louisiana",
+     "away_rank": null,
+     "home": "North Dakota State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": 7,
+     "home": "BYU",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "New Mexico",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Northwest",
+     "away_rank": null,
+     "home": "Clemson",
+     "home_rank": 4,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:00 PM",
+     "final": null
+    },
+    {
+     "away": "Arkansas",
+     "away_rank": null,
+     "home": "Tennessee",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:45 PM",
+     "final": null
+    },
+    {
+     "away": "Wake Forest",
+     "away_rank": null,
+     "home": "Navy",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:45 PM",
+     "final": null
+    },
+    {
+     "away": "Tulane",
+     "away_rank": null,
+     "home": "UCF",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:45 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Midwest",
+     "away_rank": 7,
+     "home": "Maryland",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:45 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "UTSA",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:45 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Northwest",
+     "away_rank": 4,
+     "home": "San Jose State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:45 PM",
+     "final": null
+    },
+    {
+     "away": "Missouri State",
+     "away_rank": null,
+     "home": "Georgia Southern",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "6:45 PM",
+     "final": null
+    },
+    {
+     "away": "Liberty",
+     "away_rank": null,
+     "home": "Kennesaw State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:00 PM",
+     "final": null
+    },
+    {
+     "away": "Liberty",
+     "away_rank": null,
+     "home": "Kennesaw State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Wyoming",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Oklahoma State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Northwest",
+     "away_rank": null,
+     "home": "Army",
+     "home_rank": 2,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "Delaware",
+     "home_rank": 2,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Northwest",
+     "away_rank": null,
+     "home": "Troy",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:00 PM",
+     "final": null
+    },
+    {
+     "away": "Florida International",
+     "away_rank": null,
+     "home": "Syracuse",
+     "home_rank": 23,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "California",
+     "home_rank": 22,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "UL Monroe",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "UAB",
+     "away_rank": null,
+     "home": "New Mexico State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "Washington",
+     "away_rank": null,
+     "home": "Virginia",
+     "home_rank": 17,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "8:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Southeast",
+     "away_rank": null,
+     "home": "Washington State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "9:00 PM",
+     "final": null
+    },
+    {
+     "away": "Florida International",
+     "away_rank": null,
+     "home": "Syracuse",
+     "home_rank": 23,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS West",
+     "away_rank": null,
+     "home": "California",
+     "home_rank": 22,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "FCS East",
+     "away_rank": null,
+     "home": "UL Monroe",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "UAB",
+     "away_rank": null,
+     "home": "New Mexico State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "7:30 PM",
+     "final": null
+    },
+    {
+     "away": "Michigan",
+     "away_rank": 20,
+     "home": "Baylor",
+     "home_rank": 25,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "9:00 PM",
+     "final": null
+    },
+    {
+     "away": "Fresno State",
+     "away_rank": null,
+     "home": "South Alabama",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "9:00 PM",
+     "final": null
+    },
+    {
+     "away": "Virginia Tech",
+     "away_rank": null,
+     "home": "Utah State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "10:00 PM",
+     "final": null
+    },
+    {
+     "away": "Ohio",
+     "away_rank": null,
+     "home": "Arizona",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "10:00 PM",
+     "final": null
+    },
+    {
+     "away": "FCS Northwest",
+     "away_rank": null,
+     "home": "Arizona State",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "10:00 PM",
+     "final": null
+    },
+    {
+     "away": "Stanford",
+     "away_rank": null,
+     "home": "UNLV",
+     "home_rank": null,
+     "neutral": false,
+     "date": "Sat, Sep 11",
+     "time": "10:30 PM",
+     "final": null
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,135 @@
+{
+ "screen": "members",
+ "captured_at": "2026-10-11T23:00:44",
+ "source": "2026-10-11_230044",
+ "data": [
+  {
+   "rows": [
+    {
+     "gamertag": "Armtesttom3",
+     "team_rank": 5,
+     "game": "vs FCS Midwest",
+     "progress": "0/960",
+     "team": "LSU",
+     "opponent": "FCS Midwest",
+     "home": true
+    },
+    {
+     "gamertag": "Gilly is papi",
+     "team_rank": 10,
+     "game": "at 18 Notre Danne",
+     "progress": "960/960",
+     "team": "Alabama",
+     "opponent": "Notre Dame",
+     "home": false
+    },
+    {
+     "gamertag": "RichRichie5743",
+     "team_rank": 3,
+     "game": "vs 9 USC",
+     "progress": "0/750",
+     "team": "Georgia",
+     "opponent": "USC",
+     "home": true
+    },
+    {
+     "gamertag": "Nightfalconn",
+     "team_rank": 20,
+     "game": "W 141-114 at 25 Baylor",
+     "progress": "60/900",
+     "team": "Michigan",
+     "opponent": "Baylor",
+     "home": false
+    },
+    {
+     "gamertag": "Swarmin26Hornets",
+     "team_rank": 13,
+     "game": "vs 8 Texas Tech",
+     "progress": "1050/1050",
+     "team": "Miami",
+     "opponent": "Texas Tech",
+     "home": true
+    },
+    {
+     "gamertag": "casherrill1855",
+     "team_rank": 14,
+     "game": "vs FCS West",
+     "progress": "20/845",
+     "team": "Texas A&M",
+     "opponent": "FCS West",
+     "home": true
+    },
+    {
+     "gamertag": "Slow-Mo-Zay",
+     "team_rank": 2,
+     "game": "W vs FCS Midwest",
+     "progress": "0/1050",
+     "team": "Texas",
+     "opponent": "FCS Midwest",
+     "home": true
+    },
+    {
+     "gamertag": "germanagus_2",
+     "team_rank": 7,
+     "game": null,
+     "progress": "780/780",
+     "team": "Florida"
+    },
+    {
+     "gamertag": "GoatestofAllTime",
+     "team_rank": 6,
+     "game": "W FCS East",
+     "progress": "355/1050",
+     "team": "Oregon",
+     "opponent": "FCS East",
+     "home": true
+    },
+    {
+     "gamertag": "Og_laffy7",
+     "team_rank": 1,
+     "game": "at Indiana",
+     "progress": "85/800",
+     "team": "Ohio State",
+     "opponent": "Indiana",
+     "home": false
+    },
+    {
+     "gamertag": "NUEVE4413",
+     "team_rank": 18,
+     "game": "vs 10 Alabama",
+     "progress": "0/975",
+     "team": "Notre Dame",
+     "opponent": "Alabama",
+     "home": true
+    },
+    {
+     "gamertag": "GrandeJefe21",
+     "team_rank": 9,
+     "game": "at 3 Georgia",
+     "progress": "485/1050",
+     "team": "USC",
+     "opponent": "Georgia",
+     "home": false
+    },
+    {
+     "gamertag": "Roljor",
+     "team_rank": 4,
+     "game": "W vs Toledo",
+     "progress": "0/550",
+     "team": "South Carolina",
+     "opponent": "Toledo",
+     "home": true
+    },
+    {
+     "gamertag": "OceanDriveHeata",
+     "team_rank": null,
+     "game": "at Penn State",
+     "progress": "0/660",
+     "team": "Florida State",
+     "opponent": "Penn State",
+     "home": false
+    }
+   ]
+  }
+ ]
+}

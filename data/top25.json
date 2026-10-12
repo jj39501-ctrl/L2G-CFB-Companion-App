@@ -1,0 +1,262 @@
+{
+ "screen": "top25",
+ "captured_at": "2026-10-11T23:22:28",
+ "source": "2026-10-11_230902",
+ "data": [
+  {
+   "poll": "Media",
+   "rows": [
+    {
+     "rank": 1,
+     "last_week": 1,
+     "team": "Ohio State",
+     "first_place_votes": 41,
+     "record": "1-0",
+     "points": 1601,
+     "last_game": "W 34-7 vs 10 Alabama",
+     "next_game": "at Indiana"
+    },
+    {
+     "rank": 2,
+     "last_week": 3,
+     "team": "Texas",
+     "first_place_votes": 23,
+     "record": "2-0",
+     "points": 1323,
+     "last_game": "W 21-13 vs 20 Michigan",
+     "next_game": "FCS Midwest"
+    },
+    {
+     "rank": 3,
+     "last_week": 4,
+     "team": "Georgia",
+     "first_place_votes": 1,
+     "record": "1-0",
+     "points": 1255,
+     "last_game": "W 34-27 vs Washington",
+     "next_game": "9 USC"
+    },
+    {
+     "rank": 4,
+     "last_week": 10,
+     "team": "South Carolina",
+     "first_place_votes": 0,
+     "record": "2-0",
+     "points": 1245,
+     "last_game": "W 51-10 vs 13 Miami",
+     "next_game": "Toledo"
+    },
+    {
+     "rank": 5,
+     "last_week": 7,
+     "team": "LSU",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 1237,
+     "last_game": "W 24-14 vs 14 Texas A&M",
+     "next_game": "FCS Midwest"
+    },
+    {
+     "rank": 6,
+     "last_week": 5,
+     "team": "Oregon",
+     "first_place_votes": 0,
+     "record": "2-0",
+     "points": 1208,
+     "last_game": "W 58-23 vs Clemson",
+     "next_game": "FCS East"
+    },
+    {
+     "rank": 7,
+     "last_week": 14,
+     "team": "Florida",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 1006,
+     "last_game": "W 34-24 vs 18 Notre Dame",
+     "next_game": null
+    },
+    {
+     "rank": 8,
+     "last_week": 11,
+     "team": "Texas Tech",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 956,
+     "last_game": "W 37-23 vs UConn",
+     "next_game": "at 13 Miami"
+    },
+    {
+     "rank": 9,
+     "last_week": 13,
+     "team": "USC",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 876,
+     "last_game": "W 66-3 vs FCS Northwest",
+     "next_game": "at 3 Georgia"
+    },
+    {
+     "rank": 10,
+     "last_week": 2,
+     "team": "Alabama",
+     "first_place_votes": 0,
+     "record": "0-1",
+     "points": 875,
+     "last_game": "L 34-7 vs 1 Ohio State",
+     "next_game": "at 18 Notre Dame"
+    },
+    {
+     "rank": 11,
+     "last_week": 15,
+     "team": "Nebraska",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 788,
+     "last_game": "W 17-13 vs Indiana",
+     "next_game": "at Mississippi:State"
+    },
+    {
+     "rank": 12,
+     "last_week": 17,
+     "team": "Boise State",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 692,
+     "last_game": "W 48-3 vs FCS West",
+     "next_game": "at Vanderbilt"
+    },
+    {
+     "rank": 13,
+     "last_week": 6,
+     "team": "Miami",
+     "first_place_votes": 0,
+     "record": "0-1",
+     "points": 683,
+     "last_game": "L 51-10 vs 4 South Carolina",
+     "next_game": "8 Texas Tech"
+    },
+    {
+     "rank": 14,
+     "last_week": 8,
+     "team": "Texas A&M",
+     "first_place_votes": 0,
+     "record": "0-1",
+     "points": 671,
+     "last_game": "L 24-14 vs 5 LSU",
+     "next_game": "FCS West"
+    },
+    {
+     "rank": 15,
+     "last_week": 18,
+     "team": "Louisville",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 664,
+     "last_game": "W 51-23 vs FCS Midwest",
+     "next_game": "at Auburn"
+    },
+    {
+     "rank": 16,
+     "last_week": 21,
+     "team": "Penn State",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 656,
+     "last_game": "W 35-28 at 23 Syracuse",
+     "next_game": "Florida State"
+    },
+    {
+     "rank": 17,
+     "last_week": 19,
+     "team": "Virginia",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 636,
+     "last_game": "W 55-3 vs FCS Northwest",
+     "next_game": "Washington"
+    },
+    {
+     "rank": 18,
+     "last_week": 9,
+     "team": "Notre Dame",
+     "first_place_votes": 0,
+     "record": "0-1",
+     "points": 616,
+     "last_game": "L 34-24 vs 7 Florida",
+     "next_game": "10 Alabama"
+    },
+    {
+     "rank": 19,
+     "last_week": 20,
+     "team": "Oklahoma",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 608,
+     "last_game": "W 48-3 vs FCS Northwest",
+     "next_game": "at Ole Miss"
+    },
+    {
+     "rank": 20,
+     "last_week": 12,
+     "team": "Michigan",
+     "first_place_votes": 0,
+     "record": "0-1",
+     "points": 527,
+     "last_game": "L 21-13 vs 2 Texas",
+     "next_game": "at 25 Baylor"
+    },
+    {
+     "rank": 21,
+     "last_week": 23,
+     "team": "TCU",
+     "first_place_votes": 0,
+     "record": "2-0",
+     "points": 483,
+     "last_game": "W 49-17 vs FCS Northwest",
+     "next_game": "West Virginia"
+    },
+    {
+     "rank": 22,
+     "last_week": 25,
+     "team": "California",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 422,
+     "last_game": "W 35-7 at Mississippi State",
+     "next_game": "FCS West"
+    },
+    {
+     "rank": 23,
+     "last_week": 16,
+     "team": "Syracuse",
+     "first_place_votes": 0,
+     "record": "0-1",
+     "points": 420,
+     "last_game": "L 35-28 vs 16 Penn State",
+     "next_game": "Florida'international"
+    },
+    {
+     "rank": 24,
+     "last_week": "NR",
+     "team": "Memphis",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 329,
+     "last_game": "W 17-10 vs Wake Forest",
+     "next_game": "FCS West"
+    },
+    {
+     "rank": 25,
+     "last_week": "NR",
+     "team": "Baylor",
+     "first_place_votes": 0,
+     "record": "1-0",
+     "points": 280,
+     "last_game": "W 37-34 at Iowa State",
+     "next_game": "20 Michigan"
+    }
+   ]
+  }
+ ]
+}

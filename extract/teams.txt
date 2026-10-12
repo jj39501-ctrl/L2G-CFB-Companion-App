@@ -1,0 +1,153 @@
+# Team names as the game shows them. OCR'd team text is matched against this list
+# (fuzzy), which strips logo debris and keeps names consistent across screens.
+# Add or fix a line here if review.json reports an unknown team. 'Name = misread, misread'
+# maps OCR misreads (usually of short names next to a logo) to the team.
+Air Force
+Akron
+Alabama
+App State
+Appalachian State
+Arizona
+Arizona State
+Arkansas
+Arkansas State
+Army
+Auburn
+Ball State
+Baylor
+Boise State
+Boston College
+Bowling Green
+Buffalo
+BYU
+California
+Central Michigan
+Charlotte
+Cincinnati
+Clemson
+Coastal Carolina
+Colorado
+Colorado State
+Delaware
+Duke
+East Carolina
+Eastern Michigan
+FIU
+Florida
+Florida Atlantic
+Florida International
+Florida State
+Fresno State
+Georgia
+Georgia Southern
+Georgia State
+Georgia Tech
+Hawai'i
+Houston
+Illinois
+Indiana
+Iowa
+Iowa State
+Jacksonville State
+James Madison
+Kansas
+Kansas State
+Kennesaw State
+Kent State
+Kentucky
+Liberty
+Louisiana
+Louisiana Tech
+Louisville
+LSU
+Marshall
+Maryland
+Memphis
+Miami
+Miami (OH)
+Miami University
+Michigan
+Michigan State
+Middle Tennessee
+Minnesota
+Mississippi State
+Missouri
+Missouri State
+Navy
+NC State
+Nebraska
+Nevada
+New Mexico
+New Mexico State
+North Carolina
+North Dakota State
+North Texas
+Northern Illinois
+Northwestern
+Notre Dame
+Ohio
+Ohio State
+Oklahoma
+Oklahoma State
+Old Dominion
+Ole Miss
+Oregon
+Oregon State
+Penn State
+Pittsburgh
+Purdue
+Rice
+Rutgers
+Sacramento State
+Sam Houston
+San Diego State
+San Jose State
+SMU
+South Alabama
+South Carolina
+South Florida
+Southern Miss
+Southern Mississippi
+Stanford
+Syracuse
+TCU
+Temple
+Tennessee
+Texas
+Texas A&M
+Texas State
+Texas Tech
+Toledo
+Troy
+Tulane
+Tulsa
+UAB = IJAB, YAB, VAB, JAB
+UCF
+UCLA
+UConn
+UL Monroe
+UMass
+UNLV
+USC
+Utah
+Utah State
+UTEP
+UTSA
+USF
+Vanderbilt
+Virginia
+Virginia Tech
+Wake Forest
+Washington
+Washington State
+West Virginia
+Western Kentucky
+Western Michigan
+Wisconsin
+Wyoming
+FCS East
+FCS Midwest
+FCS Northeast
+FCS Northwest
+FCS Southeast
+FCS West

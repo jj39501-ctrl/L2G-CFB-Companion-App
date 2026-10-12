@@ -1,23 +1,30 @@
-"""python -m extract [capture_dir ...]
+"""python -m extract [--only screen,screen] [capture_dir ...]
 
 OCR the latest capture of each screen (from the given capture folders, or all of
 captures/) into data/<screen>.json, plus data/review.json listing anything that
-didn't read cleanly.
+didn't read cleanly. --only re-extracts just those screens (others keep their data).
 """
 
+import argparse
 import json
-import sys
 import time
+from datetime import datetime
 from concurrent.futures import ProcessPoolExecutor
 from pathlib import Path
 
-from . import stats
+from . import link, screens, stats
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 EXTRACTORS = {
     "season_stats": lambda folder, pool: [stats.extract_category(c, pool)
                                           for c in sorted(folder.glob("category*"))],
+    "top25": screens.top25,
+    "standings": screens.standings,
+    "schedule": screens.schedule,
+    "heisman_watch": screens.heisman_watch,
+    "players_of_week": screens.players_of_week,
+    "members": screens.members,
 }
 
 
@@ -26,34 +33,53 @@ def latest_captures(dirs: list[Path]) -> dict[str, tuple[Path, str]]:
     found = {}
     for run in sorted(dirs):
         manifest = run / "manifest.json"
-        if not manifest.exists():
-            continue
-        meta = json.loads(manifest.read_text(encoding="utf-8"))
-        for screen, files in meta["screens"].items():
-            if files:
-                found[screen] = (run / screen, meta["captured_at"])
+        if manifest.exists():
+            meta = json.loads(manifest.read_text(encoding="utf-8"))
+            screens_found = [s for s, files in meta["screens"].items() if files]
+            captured_at = meta["captured_at"]
+        else:
+            # A run stopped before writing its manifest: use what it saved, timed by its name.
+            screens_found = [d.name for d in run.iterdir() if d.is_dir() and any(d.rglob("*.png"))]
+            captured_at = datetime.strptime(run.name, "%Y-%m-%d_%H%M%S").isoformat()
+        for screen in screens_found:
+            found[screen] = (run / screen, captured_at)
     return found
 
 
 def main():
-    dirs = [Path(a) for a in sys.argv[1:]] or [d for d in (ROOT / "captures").iterdir() if d.is_dir()]
+    ap = argparse.ArgumentParser(prog="python -m extract")
+    ap.add_argument("dirs", nargs="*", type=Path)
+    ap.add_argument("--only", help="comma-separated screens to re-extract")
+    args = ap.parse_args()
+    dirs = args.dirs or [d for d in (ROOT / "captures").iterdir() if d.is_dir()]
+    only = set(args.only.split(",")) if args.only else None
     DATA.mkdir(exist_ok=True)
-    review = {}
+
+    results, meta = {}, {}
     with ProcessPoolExecutor(4) as pool:
         for screen, (folder, captured_at) in latest_captures(dirs).items():
-            if screen not in EXTRACTORS:
-                print(f"{screen}: no extractor yet, skipped")
+            if screen not in EXTRACTORS or (only and screen not in only):
                 continue
             t0 = time.time()
-            result = EXTRACTORS[screen](folder, pool)
-            flags = [f for part in result for f in part.pop("flags", [])]
-            out = {"screen": screen, "captured_at": captured_at, "source": folder.parent.name,
-                   "data": result}
-            (DATA / f"{screen}.json").write_text(json.dumps(out, indent=1) + "\n", encoding="utf-8")
-            review[screen] = flags
-            print(f"{screen}: {len(result)} part(s), {len(flags)} to review, {time.time() - t0:.0f}s",
-                  flush=True)
-    (DATA / "review.json").write_text(json.dumps(review, indent=1) + "\n", encoding="utf-8")
+            results[screen] = EXTRACTORS[screen](folder, pool)
+            meta[screen] = {"captured_at": captured_at, "source": folder.parent.name}
+            print(f"{screen}: {len(results[screen])} part(s), {time.time() - t0:.0f}s", flush=True)
+
+    # Links need the other screens' data: load what wasn't re-extracted this time.
+    for screen in ("schedule", "top25"):
+        if screen not in results and (DATA / f"{screen}.json").exists():
+            results[screen] = json.loads((DATA / f"{screen}.json").read_text(encoding="utf-8"))["data"]
+    link.member_teams(results)
+
+    review_path = DATA / "review.json"
+    review = json.loads(review_path.read_text(encoding="utf-8")) if review_path.exists() else {}
+    for screen in meta:
+        flags = [f for part in results[screen] for f in part.pop("flags", [])]
+        review[screen] = flags
+        out = {"screen": screen, **meta[screen], "data": results[screen]}
+        (DATA / f"{screen}.json").write_text(json.dumps(out, indent=1) + "\n", encoding="utf-8")
+        print(f"  {screen}: {len(flags)} to review")
+    review_path.write_text(json.dumps(review, indent=1) + "\n", encoding="utf-8")
 
 
 if __name__ == "__main__":

@@ -73,7 +73,8 @@ class GlyphReader:
             self.templates.append((char, np.asarray(Image.open(p).convert("L"), np.float32) / 255))
 
     def read(self, cell: np.ndarray) -> tuple[str, float]:
-        """Read a cell's ink map. Returns (text, weakest match score)."""
+        """Read a cell's ink map. Returns (text, margin): how far the weakest character
+        beat the best different character at its position (small = ambiguous)."""
         if cell.max() < 0.3:
             return "", 1.0                                             # empty cell
         cands = []
@@ -95,22 +96,42 @@ class GlyphReader:
                 taken.append((score, x, tw, char))
         if not taken:
             return "", 0.0
-        chars = [(x + tw / 2, char) for _, x, tw, char in taken] + [(x, ".") for x in _dots(cell)]
+        margin = 1.0
+        for score, x, tw, char in taken:
+            rivals = [sc for sc, x2, w2, c2 in cands
+                      if c2 != char and abs((x2 + w2 / 2) - (x + tw / 2)) < 0.4 * tw]
+            if rivals:
+                margin = min(margin, score - max(rivals))
+        chars = [(x + tw / 2, char) for _, x, tw, char in taken] + _marks(cell)
         text = "".join(c for _, c in sorted(chars))
-        return text, min(c[0] for c in taken)
+        return text, margin
 
 
-def _dots(cell: np.ndarray) -> list[float]:
-    """x centres of decimal points: small separate blobs sitting on the digits' baseline."""
+def _marks(cell: np.ndarray) -> list[tuple[float, str]]:
+    """Small punctuation found by shape rather than templates: decimal points (small blob
+    on the baseline), commas (dipping below it) and minus signs (short wide bar at mid
+    height). Returns (x centre, char)."""
     lab, _ = ndimage.label(cell > 0.35)
     boxes = [(s[0].start, s[0].stop, s[1].start, s[1].stop) for s in ndimage.find_objects(lab)]
     if not boxes:
         return []
     tall = max(y1 - y0 for y0, y1, _, _ in boxes)
-    base = max(y1 for y0, y1, _, _ in boxes if y1 - y0 > 0.7 * tall)
-    return [(x0 + x1) / 2 for y0, y1, x0, x1 in boxes
-            if y1 - y0 < DOT_MAX_H * tall and x1 - x0 < 0.5 * tall and abs(y1 - base) <= 3
-            and (y1 - y0) * (x1 - x0) >= 4]
+    digits = [b for b in boxes if b[1] - b[0] > 0.7 * tall]
+    base = max(y1 for _, y1, _, _ in digits)
+    top = min(y0 for y0, _, _, _ in digits)
+    out = []
+    for y0, y1, x0, x1 in boxes:
+        h, w = y1 - y0, x1 - x0
+        if h >= DOT_MAX_H * tall or h * w < 4:
+            continue
+        mid = (y0 + y1) / 2
+        if w > 1.3 * h and top + 0.25 * tall < mid < base - 0.25 * tall:
+            out.append(((x0 + x1) / 2, "-"))
+        elif y1 > base + 1 and w < 0.5 * tall:
+            out.append(((x0 + x1) / 2, ","))
+        elif abs(y1 - base) <= 3 and w < 0.5 * tall:
+            out.append(((x0 + x1) / 2, "."))
+    return out
 
 
 def save_template(char: str, ink: np.ndarray, folder: Path = TEMPLATES):

@@ -1,10 +1,20 @@
 {
- "season_stats": [
+ "schedule": [],
+ "top25": [],
+ "standings": [
   {
-   "problem": "unclear name",
-   "read": [
-    "3.York"
-   ]
+   "problem": "conference label read as ''; set to 'Big Ten' from drop-down order"
   }
- ]
+ ],
+ "heisman_watch": [],
+ "season_stats": [],
+ "players_of_week": [
+  {
+   "problem": "scope label read as 'Big 12'; set to 'Big Ten' from drop-down order"
+  },
+  {
+   "problem": "scope label read as ''; set to 'MW' from drop-down order"
+  }
+ ],
+ "members": []
 }

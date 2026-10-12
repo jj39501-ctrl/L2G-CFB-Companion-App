@@ -1,0 +1,47 @@
+{
+ "screen": "heisman_watch",
+ "captured_at": "2026-10-11T23:22:28",
+ "source": "2026-10-11_230902",
+ "data": [
+  {
+   "rows": [
+    {
+     "place": 1,
+     "name": "Malachi Toney",
+     "pos": "WR",
+     "team": "Miami",
+     "team_rank": 13,
+     "year": "JR",
+     "change": null
+    },
+    {
+     "place": 2,
+     "name": "Jeremiah Smith",
+     "pos": "WR",
+     "team": "Ohio State",
+     "team_rank": 1,
+     "year": "SR",
+     "change": null
+    },
+    {
+     "place": 3,
+     "name": "Keelon Russell",
+     "pos": "QB",
+     "team": "Alabama",
+     "team_rank": 10,
+     "year": "SO (RS)",
+     "change": null
+    },
+    {
+     "place": 4,
+     "name": "Dante Moore",
+     "pos": "QB",
+     "team": "Oregon",
+     "team_rank": 6,
+     "year": "SR (RS)",
+     "change": null
+    }
+   ]
+  }
+ ]
+}

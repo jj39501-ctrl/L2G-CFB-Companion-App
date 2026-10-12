@@ -1,0 +1,319 @@
+{
+ "screen": "players_of_week",
+ "captured_at": "2026-10-11T23:22:28",
+ "source": "2026-10-11_230902",
+ "data": [
+  {
+   "scope": "National",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Darius Malcolm Jr.",
+    "pos": "CB",
+    "number": 7,
+    "game": "vs Wake Forest (W 17-10)",
+    "result": {
+     "outcome": "W",
+     "score": "17-10"
+    },
+    "stats": "7 TKL, 3 1 NT, 2 PBU"
+   },
+   "offensive": {
+    "name": "C.J. Easy",
+    "pos": "QB",
+    "number": 2,
+    "game": "vs Clemson (W 58-23)",
+    "result": {
+     "outcome": "W",
+     "score": "58-23"
+    },
+    "stats": "16-24, 324 PASS YDS, 13.5 YPA, 2 PASS TD, 1 1 NT, 23 CAR, 191 RUSH YDS, 5 RUSH TD"
+   }
+  },
+  {
+   "scope": "ACC",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Camren Hamiel",
+    "pos": "FS",
+    "number": 24,
+    "game": "vs 5 LSU (L 24-14)",
+    "result": {
+     "outcome": "L",
+     "score": "24-14"
+    },
+    "stats": "11 2 PBU, 1 FF, 2 FR"
+   },
+   "offensive": {
+    "name": "C.J. Easy",
+    "pos": "QB",
+    "number": 2,
+    "game": "vs Clemson (W 58-23)",
+    "result": {
+     "outcome": "W",
+     "score": "58-23"
+    },
+    "stats": "16-24, 324 PASS YDS, 13.5 YPA, 2 PASS TD, 1 1 NT, 23 CAR, 191 RUSH YDS, 5 RUSH TD"
+   }
+  },
+  {
+   "scope": "American",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Darius Malcolm Jr.",
+    "pos": "CB",
+    "number": 7,
+    "game": "vs Wake Forest (W 17-10)",
+    "result": {
+     "outcome": "W",
+     "score": "17-10"
+    },
+    "stats": "7 TKL, 3 1 NT, 2 PBU"
+   },
+   "offensive": {
+    "name": "Lloyd Jones III",
+    "pos": null,
+    "number": 5,
+    "game": "vs FCS Midwest (W 42-24)",
+    "result": {
+     "outcome": "W",
+     "score": "42-24"
+    },
+    "stats": "21-32, 261 PASS YDS, 8.2 YPA, 1 PASS TD, 13 CAR, 95 RUSH YDS, 2 RUSH TD"
+   }
+  },
+  {
+   "scope": "Big 12",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Daevon Iles",
+    "pos": "SS",
+    "number": 2,
+    "game": "vs Charlotte (W 35-21)",
+    "result": {
+     "outcome": "W",
+     "score": "35-21"
+    },
+    "stats": "10 TKL, 1 1 NT, 3 PBU"
+   },
+   "offensive": {
+    "name": "Byrd Ficklin",
+    "pos": "QB",
+    "number": 15,
+    "game": "vs FCS West (W 65-21)",
+    "result": {
+     "outcome": "W",
+     "score": "65-21"
+    },
+    "stats": "19-28, 268 PASS YDS, 9.6 YPA, 5 PASS TD, 9 CAR, 103 RUSH YDS, 1 RUSH TD"
+   }
+  },
+  {
+   "scope": "Big Ten",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Syair Torrence",
+    "pos": "CB",
+    "number": 10,
+    "game": "vs FCS Midwest (W 36-0)",
+    "result": {
+     "outcome": "W",
+     "score": "36-0"
+    },
+    "stats": "7 TKL, 1 1 NT, 1 PBU, 1 TD"
+   },
+   "offensive": {
+    "name": "Eli Holstein",
+    "pos": null,
+    "number": 10,
+    "game": "vs FCS Northwest (W 55-3)",
+    "result": {
+     "outcome": "W",
+     "score": "55-3"
+    },
+    "stats": "36-42, 422 PASS YDS, 10.0 YPA, 5 PASS TD, 10 CAR, 110 RUSH YDS, 1 RUSH TD"
+   }
+  },
+  {
+   "scope": "CUSA",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Orlando Syph-Timmons",
+    "pos": null,
+    "number": null,
+    "game": "vs FCS Midwest (W 26-10)",
+    "result": {
+     "outcome": "W",
+     "score": "26-10"
+    },
+    "stats": "13 TKL, 2 4 FR"
+   },
+   "offensive": {
+    "name": "Jaylen Mason",
+    "pos": null,
+    "number": 16,
+    "game": "vs FCS Midwest (W 62-14)",
+    "result": {
+     "outcome": "W",
+     "score": "62-14"
+    },
+    "stats": "32-42, 442 PASS YDS, 10.5 YPA, 4 PASS TD, 11 CAR, 45 RUSH YDS, 1 RUSH"
+   }
+  },
+  {
+   "scope": "Independent",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Rylan Barnes",
+    "pos": "SAM",
+    "number": null,
+    "game": "vs 25 Baylor (L 37-34)",
+    "result": {
+     "outcome": "L",
+     "score": "37-34"
+    },
+    "stats": "12 TKL, 1 TFL, 5 PBU"
+   },
+   "offensive": {
+    "name": "Tra'Mar Harris",
+    "pos": "WR",
+    "number": 11,
+    "game": "vs SMU (W 39-38)",
+    "result": {
+     "outcome": "W",
+     "score": "39-38"
+    },
+    "stats": "11 REC, 232 REC YDS, 21.1 AVG, 3 REC, 1 Fl-JM, 2 CAR, 3 RUSH YDS, 1.5 AVG"
+   }
+  },
+  {
+   "scope": "MAC",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "KIVion Thunderbird",
+    "pos": null,
+    "number": null,
+    "game": "vs Utah State (L 35-10)",
+    "result": {
+     "outcome": "L",
+     "score": "35-10"
+    },
+    "stats": "10 TKL, 0.5 SACKS, 1 TFL, 1 1 NT, 2 PBU"
+   },
+   "offensive": {
+    "name": "Cade Brooks",
+    "pos": "IRS",
+    "number": null,
+    "game": "vs FCS East (W 27-24)",
+    "result": {
+     "outcome": "W",
+     "score": "27-24"
+    },
+    "stats": "6 REC, 124 REC YDS, 20.7 AVG, 2 REC TD"
+   }
+  },
+  {
+   "scope": "MW",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Justin Harris",
+    "pos": "SS",
+    "number": 7,
+    "game": "vs FCS West (W 45-7)",
+    "result": {
+     "outcome": "W",
+     "score": "45-7"
+    },
+    "stats": "3 TKL, 1 1 NT, 1 PBU, 1 FF"
+   },
+   "offensive": {
+    "name": "Triston White",
+    "pos": "HB",
+    "number": 8,
+    "game": "vs FCS West (W 45-7)",
+    "result": {
+     "outcome": "W",
+     "score": "45-7"
+    },
+    "stats": "16 CAR, 86 RUSH YDS, 5.4 AVG, 4 RUSH TD"
+   }
+  },
+  {
+   "scope": "Pac-12",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Michael Patterson",
+    "pos": null,
+    "number": null,
+    "game": "vs FCS West (W 28-10)",
+    "result": {
+     "outcome": "W",
+     "score": "28-10"
+    },
+    "stats": "6 TKL, 1 1 NT, 2 PBU, 1 TD"
+   },
+   "offensive": {
+    "name": "Colton Joseph",
+    "pos": "QB",
+    "number": 3,
+    "game": "vs FCS West (W 48-3)",
+    "result": {
+     "outcome": "W",
+     "score": "48-3"
+    },
+    "stats": "19-23, 238 PASS YDS, 10.3 YPA, 1 PASS TD, 12 CAR, 124 RUSH YDS, 3 RUSH TD"
+   }
+  },
+  {
+   "scope": "SEC",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "DJ Pickett",
+    "pos": "CB",
+    "number": 3,
+    "game": "at 14 Texas (W 24-14)",
+    "result": {
+     "outcome": "W",
+     "score": "24-14"
+    },
+    "stats": "8 TKL, 0.5 SACKS, 1 TFL, 1 1 NT, 1 PBU, 1 TD"
+   },
+   "offensive": {
+    "name": "Mitch Sanderson",
+    "pos": "HB",
+    "number": 38,
+    "game": "vs (JAB (W 52-28)",
+    "result": {
+     "outcome": "W",
+     "score": "52-28"
+    },
+    "stats": "19 CAR, 80 RUSH YDS, 4.2 AVG, 6 RUSH"
+   }
+  },
+  {
+   "scope": "Sun Belt",
+   "week": "Season Week 1",
+   "defensive": {
+    "name": "Dre Walker",
+    "pos": "CB",
+    "number": null,
+    "game": "vs FCS Southeast (W 31-17)",
+    "result": {
+     "outcome": "W",
+     "score": "31-17"
+    },
+    "stats": "6 TKL, 2 1 NT, 2 PBU"
+   },
+   "offensive": {
+    "name": "Kristian Tate",
+    "pos": "WR",
+    "number": 7,
+    "game": "vs Arkansas State (L 24-20)",
+    "result": {
+     "outcome": "L",
+     "score": "24-20"
+    },
+    "stats": "12 REC, 144 REC YDS, 12.0 AVG, 1 RECTD"
+   }
+  }
+ ]
+}

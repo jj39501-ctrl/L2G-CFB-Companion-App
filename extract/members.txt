@@ -1,0 +1,17 @@
+# League members' gamertags, exactly as they should appear on the site. OCR'd gamertags
+# are snapped to this list (they're arbitrary text, so OCR alone can't spell-check them).
+# Add new members here; review.json lists any gamertag that didn't match.
+Armtesttom3
+Gilly is papi
+RichRichie5743
+Nightfalconn
+Swarmin26Hornets
+casherrill1855
+Slow-Mo-Zay
+germanagus_2
+GoatestofAllTime
+Og_laffy7
+NUEVE4413
+GrandeJefe21
+Roljor
+OceanDriveHeata

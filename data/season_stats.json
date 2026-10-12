@@ -183,7 +183,7 @@
      "TD:INT": 0.5,
      "YPA": 6.4,
      "NY/A": 5.8,
-     "ANY/A": 2.8,
+     "ANY/A": 2.9,
      "YPG": 220.0,
      "RATING": 108.4,
      "LONG": 28,
@@ -1200,7 +1200,7 @@
      "RATING": 161.8,
      "LONG": 32,
      "SACKS": 1,
-     "SACK %": 2.8,
+     "SACK %": 2.9,
      "SNAPS": 73
     },
     {
@@ -1954,13 +1954,13 @@
      "TD:INT": 2.0,
      "YPA": 6.4,
      "NY/A": 6.0,
-     "ANY/A": 5.8,
+     "ANY/A": 5.9,
      "YPG": 230.0,
      "RATING": 127.5,
      "LONG": 28,
      "SACKS": 1,
      "SACK %": 2.7,
-     "SNAPS": 78
+     "SNAPS": 79
     },
     {
      "NAME": "E.Colson",
@@ -2456,7 +2456,7 @@
      "SNAPS": 95
     },
     {
-     "NAME": "J.Denman",
+     "NAME": "J.SIDenman",
      "POS": "HB",
      "GP": 2,
      "CAR": 23,
@@ -2830,7 +2830,7 @@
      "SNAPS": 57
     },
     {
-     "NAME": "J.SIEdwards",
+     "NAME": "J.Edwards",
      "POS": "HB",
      "GP": 1,
      "CAR": 17,
@@ -3102,7 +3102,7 @@
      "SNAPS": 18
     },
     {
-     "NAME": "B.DOII",
+     "NAME": "B.Doll",
      "POS": "HB",
      "GP": 1,
      "CAR": 18,
@@ -3578,7 +3578,7 @@
      "SNAPS": 52
     },
     {
-     "NAME": "C.Wheatley-Hum",
+     "NAME": "C.Wheatieyzhumpt",
      "POS": "HB",
      "GP": 1,
      "CAR": 15,
@@ -3762,7 +3762,7 @@
      "LONG": 22,
      "FUMB": 0,
      "FUM %": 0.0,
-     "SNAPS": 36
+     "SNAPS": 38
     },
     {
      "NAME": "C.Kouemi",
@@ -3772,7 +3772,7 @@
      "YARDS": 85,
      "AVG": 5.7,
      "TD": 1,
-     "AVG G": 850,
+     "AVG G": 85.0,
      "20+": 2,
      "YAC": 64,
      "BTK": 4,
@@ -3850,7 +3850,7 @@
      "SNAPS": 36
     },
     {
-     "NAME": "G.LaDug",
+     "NAME": "G.LaDue",
      "POS": "FB",
      "GP": 1,
      "CAR": 12,
@@ -4252,7 +4252,7 @@
      "RAC": 60,
      "RAC AVG": 10.0,
      "DROPS": 0,
-     "SNAPS": 66
+     "SNAPS": 68
     },
     {
      "NAME": "D.Wilson",
@@ -4810,7 +4810,7 @@
      "SNAPS": 62
     },
     {
-     "NAME": "B.Malone-Bradf",
+     "NAME": "B.Malone-Bradford",
      "POS": "WR",
      "GP": 1,
      "REC": 6,
@@ -5162,7 +5162,7 @@
      "YARDS": 97,
      "AVG": 9.7,
      "TD": 2,
-     "AVG G": 97.0,
+     "AVG G": 87.0,
      "LONG": 30,
      "RAC": 42,
      "RAC AVG": 4.2,
@@ -5317,10 +5317,10 @@
      "RAC": 27,
      "RAC AVG": 3.4,
      "DROPS": 0,
-     "SNAPS": 66
+     "SNAPS": 68
     },
     {
-     "NAME": "J.Savoury",
+     "NAME": "J.SLSavoury",
      "POS": "TE",
      "GP": 1,
      "REC": 6,
@@ -5588,7 +5588,7 @@
    ],
    "rows": [
     {
-     "NAME": "H.Purvis",
+     "NAME": "I.Purvis",
      "POS": "C",
      "GP": 1,
      "SACK": 0,
@@ -5665,7 +5665,7 @@
      "SNAPS": 32
     },
     {
-     "NAME": "C.Crosley",
+     "NAME": "C.Croslev",
      "POS": "RG",
      "GP": 1,
      "SACK": 0,
@@ -5855,7 +5855,7 @@
     },
     {
      "NAME": "K.Parker",
-     "POS": "TE",
+     "POS": "LT",
      "GP": 1,
      "SACK": 0,
      "SNAPS": 64
@@ -5883,7 +5883,7 @@
     },
     {
      "NAME": "D.Rivers",
-     "POS": "TE",
+     "POS": "LT",
      "GP": 1,
      "SACK": 0,
      "SNAPS": 20
@@ -5903,7 +5903,7 @@
      "SNAPS": 79
     },
     {
-     "NAME": "I.Ellinger",
+     "NAME": "G.Ellinger",
      "POS": "RG",
      "GP": 1,
      "SACK": 0,
@@ -5917,7 +5917,7 @@
      "SNAPS": 71
     },
     {
-     "NAME": "U.Dyakonov",
+     "NAME": "V.Dyakonov",
      "POS": "RT",
      "GP": 1,
      "SACK": 0,
@@ -5925,7 +5925,7 @@
     },
     {
      "NAME": "E.Blackwell",
-     "POS": "TE",
+     "POS": "LT",
      "GP": 1,
      "SACK": 0,
      "SNAPS": 85
@@ -5938,7 +5938,7 @@
      "SNAPS": 57
     },
     {
-     "NAME": "J.Palucki",
+     "NAME": "J.PaIucki",
      "POS": "TE",
      "GP": 2,
      "SACK": 0,
@@ -5967,7 +5967,7 @@
     },
     {
      "NAME": "J.Chatman",
-     "POS": "TE",
+     "POS": "LT",
      "GP": 2,
      "SACK": 0,
      "SNAPS": 103
@@ -6043,7 +6043,7 @@
      "SNAPS": 76
     },
     {
-     "NAME": "I.Johnson",
+     "NAME": "A.Johnson",
      "POS": "LT",
      "GP": 1,
      "SACK": 0,
@@ -6114,7 +6114,7 @@
     },
     {
      "NAME": "E.Ogboko",
-     "POS": "TE",
+     "POS": "LT",
      "GP": 1,
      "SACK": 0,
      "SNAPS": 66
@@ -6134,8 +6134,8 @@
      "SNAPS": 66
     },
     {
-     "NAME": "I.Mackenny",
-     "POS": "TE",
+     "NAME": "E.Mackenny",
+     "POS": "LT",
      "GP": 1,
      "SACK": 0,
      "SNAPS": 85
@@ -6211,7 +6211,7 @@
      "SNAPS": 88
     },
     {
-     "NAME": "3.York",
+     "NAME": "B.York",
      "POS": "LT",
      "GP": 1,
      "SACK": 1,
@@ -6219,7 +6219,7 @@
     },
     {
      "NAME": "J.Hall",
-     "POS": "LT",
+     "POS": "TE",
      "GP": 1,
      "SACK": 1,
      "SNAPS": 75
@@ -6240,7 +6240,7 @@
     },
     {
      "NAME": "G.Seagren",
-     "POS": "TE",
+     "POS": "LT",
      "GP": 1,
      "SACK": 1,
      "SNAPS": 92
@@ -6268,7 +6268,7 @@
     },
     {
      "NAME": "B.Walton",
-     "POS": "LT",
+     "POS": "TE",
      "GP": 1,
      "SACK": 1,
      "SNAPS": 66
@@ -6340,7 +6340,7 @@
      "SNAPS": 157
     },
     {
-     "NAME": "U.Firenze",
+     "NAME": "V.Firenze",
      "POS": "WILL",
      "GP": 2,
      "SOLO": 16,
@@ -7789,7 +7789,7 @@
      "SNAPS": 74
     },
     {
-     "NAME": "P.Young-Blackgo",
+     "NAME": "P.Young-Blackgoat",
      "POS": "MIKE",
      "GP": 1,
      "SOLO": 9,
@@ -8134,7 +8134,7 @@
      "SNAPS": 136
     },
     {
-     "NAME": "D.Lles",
+     "NAME": "D.Iles",
      "POS": "SS",
      "GP": 1,
      "SOLO": 10,
@@ -8387,7 +8387,7 @@
      "SNAPS": 81
     },
     {
-     "NAME": "J.Layas",
+     "NAME": "J.Zayas",
      "POS": "CB",
      "GP": 1,
      "SOLO": 9,
@@ -8456,7 +8456,7 @@
      "SNAPS": 91
     },
     {
-     "NAME": "C.LaUallee",
+     "NAME": "C.LaVallee",
      "POS": "WILL",
      "GP": 1,
      "SOLO": 9,
@@ -8962,7 +8962,7 @@
     },
     {
      "NAME": "M.Connington",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 3,
@@ -8988,7 +8988,7 @@
     },
     {
      "NAME": "K.Lyles",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9014,7 +9014,7 @@
     },
     {
      "NAME": "J.Rudolph",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9040,7 +9040,7 @@
     },
     {
      "NAME": "T.Lorito",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9066,7 +9066,7 @@
     },
     {
      "NAME": "J.Saturday",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9092,7 +9092,7 @@
     },
     {
      "NAME": "M.Gentry",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9118,7 +9118,7 @@
     },
     {
      "NAME": "B.Craig",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9144,7 +9144,7 @@
     },
     {
      "NAME": "C.Hardin",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9170,7 +9170,7 @@
     },
     {
      "NAME": "J.Fernandez",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 3,
@@ -9196,7 +9196,7 @@
     },
     {
      "NAME": "D.Watkins",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 3,
@@ -9222,7 +9222,7 @@
     },
     {
      "NAME": "S.Layous",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9248,7 +9248,7 @@
     },
     {
      "NAME": "A.Burrell",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 3,
@@ -9274,7 +9274,7 @@
     },
     {
      "NAME": "C.Wilbanks",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9300,7 +9300,7 @@
     },
     {
      "NAME": "M.Kelley",
-     "POS": "K",
+     "POS": "",
      "GP": 2,
      "FGM": 2,
      "FGA": 2,
@@ -9326,7 +9326,7 @@
     },
     {
      "NAME": "D.Clark",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9352,7 +9352,7 @@
     },
     {
      "NAME": "L.Evans",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9378,7 +9378,7 @@
     },
     {
      "NAME": "S.Keltner",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9404,7 +9404,7 @@
     },
     {
      "NAME": "B.Baca",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9429,8 +9429,8 @@
      "SNAPS": 4
     },
     {
-     "NAME": "M.Salgado-Med",
-     "POS": "K",
+     "NAME": "M.Salgado-Medina",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9456,7 +9456,7 @@
     },
     {
      "NAME": "T.Black",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9482,7 +9482,7 @@
     },
     {
      "NAME": "D.Jones",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9508,7 +9508,7 @@
     },
     {
      "NAME": "C.Gibbs",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9534,7 +9534,7 @@
     },
     {
      "NAME": "H.Wolfe",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9560,7 +9560,7 @@
     },
     {
      "NAME": "C.Moore",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9586,7 +9586,7 @@
     },
     {
      "NAME": "A.Casillas",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 3,
@@ -9612,7 +9612,7 @@
     },
     {
      "NAME": "C.Salas",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 3,
@@ -9638,7 +9638,7 @@
     },
     {
      "NAME": "J.Dimas",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9664,7 +9664,7 @@
     },
     {
      "NAME": "M.Spadola",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9690,7 +9690,7 @@
     },
     {
      "NAME": "E.Ozick",
-     "POS": "K",
+     "POS": "",
      "GP": 2,
      "FGM": 2,
      "FGA": 2,
@@ -9716,7 +9716,7 @@
     },
     {
      "NAME": "M.Watanabe",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9742,7 +9742,7 @@
     },
     {
      "NAME": "R.Czeremcha",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 2,
@@ -9768,7 +9768,7 @@
     },
     {
      "NAME": "R.Kessinger",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 2,
      "FGA": 3,
@@ -9794,7 +9794,7 @@
     },
     {
      "NAME": "M.Baker",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -9820,7 +9820,7 @@
     },
     {
      "NAME": "S.Mclntyre",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -9846,7 +9846,7 @@
     },
     {
      "NAME": "D.Little",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -9872,7 +9872,7 @@
     },
     {
      "NAME": "N.Gramatica",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -9898,7 +9898,7 @@
     },
     {
      "NAME": "J.Gilbert",
-     "POS": "K",
+     "POS": "",
      "GP": 2,
      "FGM": 1,
      "FGA": 1,
@@ -9924,7 +9924,7 @@
     },
     {
      "NAME": "C.Chittenden",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -9950,7 +9950,7 @@
     },
     {
      "NAME": "C.Ranvier",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 3,
@@ -9976,7 +9976,7 @@
     },
     {
      "NAME": "C.Byrd",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 2,
@@ -10002,7 +10002,7 @@
     },
     {
      "NAME": "E.Sandvik",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 2,
@@ -10028,7 +10028,7 @@
     },
     {
      "NAME": "K.Lemmermann",
-     "POS": "K",
+     "POS": "",
      "GP": 2,
      "FGM": 1,
      "FGA": 2,
@@ -10054,7 +10054,7 @@
     },
     {
      "NAME": "K.Campbell",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10080,7 +10080,7 @@
     },
     {
      "NAME": "M.Petro",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 2,
@@ -10106,7 +10106,7 @@
     },
     {
      "NAME": "Q.Shields",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 2,
@@ -10132,7 +10132,7 @@
     },
     {
      "NAME": "J.London",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10158,7 +10158,7 @@
     },
     {
      "NAME": "R.Schouman",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 2,
@@ -10184,7 +10184,7 @@
     },
     {
      "NAME": "P.Notaro",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 2,
@@ -10210,7 +10210,7 @@
     },
     {
      "NAME": "N.Reed",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10236,7 +10236,7 @@
     },
     {
      "NAME": "N.Sidan",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10262,7 +10262,7 @@
     },
     {
      "NAME": "S.Reynolds",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10288,7 +10288,7 @@
     },
     {
      "NAME": "J.Lozano",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10314,7 +10314,7 @@
     },
     {
      "NAME": "M.Arenas",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10340,7 +10340,7 @@
     },
     {
      "NAME": "S.Hunsaker",
-     "POS": "K",
+     "POS": "",
      "GP": 2,
      "FGM": 1,
      "FGA": 1,
@@ -10366,7 +10366,7 @@
     },
     {
      "NAME": "D.Kinney",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10392,7 +10392,7 @@
     },
     {
      "NAME": "K.Nguma",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10418,7 +10418,7 @@
     },
     {
      "NAME": "E.Scott",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10444,7 +10444,7 @@
     },
     {
      "NAME": "N.Hauser",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10470,7 +10470,7 @@
     },
     {
      "NAME": "M.Jaramillo",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10496,7 +10496,7 @@
     },
     {
      "NAME": "S.Leonard",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10521,8 +10521,8 @@
      "SNAPS": 5
     },
     {
-     "NAME": "J.SLKauwe",
-     "POS": "K",
+     "NAME": "J.Kauwe",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10548,7 +10548,7 @@
     },
     {
      "NAME": "L.Rodriguez",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10574,7 +10574,7 @@
     },
     {
      "NAME": "E.Souza",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10600,7 +10600,7 @@
     },
     {
      "NAME": "S.Starzyk",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10626,7 +10626,7 @@
     },
     {
      "NAME": "R.Armstrong",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10652,7 +10652,7 @@
     },
     {
      "NAME": "J.Diaz Nicolas",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10964,7 +10964,7 @@
     },
     {
      "NAME": "T.Sinatra",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -10990,7 +10990,7 @@
     },
     {
      "NAME": "N.Sur",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -11016,7 +11016,7 @@
     },
     {
      "NAME": "S.Porath",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 2,
@@ -11042,7 +11042,7 @@
     },
     {
      "NAME": "S.Snider",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -11068,7 +11068,7 @@
     },
     {
      "NAME": "J.Courville",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 1,
      "FGA": 1,
@@ -11094,7 +11094,7 @@
     },
     {
      "NAME": "G.Rippa",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 0,
      "FGA": 1,
@@ -11120,7 +11120,7 @@
     },
     {
      "NAME": "T.Bryant",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 0,
      "FGA": 0,
@@ -11146,7 +11146,7 @@
     },
     {
      "NAME": "M.Gilbert",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 0,
      "FGA": 0,
@@ -11172,7 +11172,7 @@
     },
     {
      "NAME": "A.Bui",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 0,
      "FGA": 0,
@@ -11198,7 +11198,7 @@
     },
     {
      "NAME": "D.Cunanan",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 0,
      "FGA": 1,
@@ -11224,7 +11224,7 @@
     },
     {
      "NAME": "R.Adongo",
-     "POS": "K",
+     "POS": "",
      "GP": 1,
      "FGM": 0,
      "FGA": 1,
@@ -11334,7 +11334,7 @@
      "POS": "P",
      "GP": 1,
      "PUNTS": 10,
-     "YARDS": 462,
+     "YARDS": 62,
      "AVG": 46.2,
      "NET YDS": 462,
      "NET AVG": 46.2,
@@ -11364,7 +11364,7 @@
      "POS": "P",
      "GP": 1,
      "PUNTS": 10,
-     "YARDS": 422,
+     "YARDS": 22,
      "AVG": 42.2,
      "NET YDS": 422,
      "NET AVG": 42.2,
@@ -11740,9 +11740,9 @@
      "GP": 1,
      "PUNTS": 7,
      "YARDS": 312,
-     "AVG": 44.6,
+     "AVG": 44.8,
      "NET YDS": 312,
-     "NET AVG": 44.6,
+     "NET AVG": 44.8,
      "IN20": 2,
      "TB": 1,
      "LONG": 60,
@@ -11855,7 +11855,7 @@
      "SNAPS": 20
     },
     {
-     "NAME": "J.Bolen",
+     "NAME": "J.LBolen",
      "POS": "P",
      "GP": 1,
      "PUNTS": 7,
@@ -11930,7 +11930,7 @@
      "SNAPS": 12
     },
     {
-     "NAME": "D.DrennaL",
+     "NAME": "D.Drennan",
      "POS": "P",
      "GP": 1,
      "PUNTS": 6,
@@ -12590,7 +12590,7 @@
      "SNAPS": 11
     },
     {
-     "NAME": "A.Pattoo",
+     "NAME": "A.Patton",
      "POS": "P",
      "GP": 1,
      "PUNTS": 4,
@@ -13341,7 +13341,7 @@
      "POS": "WR",
      "KR": 2,
      "YARDS": 61,
-     "AVG": 30.6,
+     "AVG": 30.5,
      "TD": 0,
      "LONG": 33,
      "GP": 1,
@@ -13461,7 +13461,7 @@
      "NAME": "M.Carter Jr.",
      "POS": "FS",
      "KR": 1,
-     "YARDS": 28,
+     "YARDS": 29,
      "AVG": 29.0,
      "TD": 0,
      "LONG": 29,
@@ -13513,7 +13513,7 @@
      "SNAPS": 4
     },
     {
-     "NAME": "C.DeVries",
+     "NAME": "C.DeUries",
      "POS": "CB",
      "KR": 3,
      "YARDS": 86,
@@ -13854,7 +13854,7 @@
      "SNAPS": 42
     },
     {
-     "NAME": "M.Harrison-Pilo'",
+     "NAME": "M.Harrison-Pilot",
      "POS": "FS",
      "KR": 1,
      "YARDS": 25,
@@ -13876,7 +13876,7 @@
      "SNAPS": 4
     },
     {
-     "NAME": "T.MartinC",
+     "NAME": "T.Martini",
      "POS": "HB",
      "KR": 2,
      "YARDS": 50,
