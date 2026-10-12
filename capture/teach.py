@@ -1,10 +1,14 @@
-"""Teach mode: you drive chiaki-ng by hand while we record keys and reference images.
+"""Teach mode: you drive chiaki-ng by hand while we record presses and reference images.
 
-F8 marks each step ("I'm here"); F9 aborts. Keys go to chiaki as normal; we only
-listen. The keys you press also teach us chiaki's keyboard mapping (R1, Circle).
+Drive with the PS5 controller or the keyboard. F8 (keyboard) marks each step
+("I'm here"); F9 aborts. Input goes to chiaki as normal; we only listen.
+Controller buttons are recorded by PS name (cross, r1, down, ...); replay sends
+the matching keyboard key from config.json's keymap.
 """
 
+import os
 import queue
+import threading
 import time
 
 from pynput import keyboard
@@ -24,18 +28,60 @@ def _name(key) -> str:
     return f"vk{key.vk}"
 
 
+# SDL game-controller button numbers -> PS names. Triggers are axes, handled below.
+PAD_BUTTONS = {0: "cross", 1: "circle", 2: "square", 3: "triangle", 4: "create", 5: "ps",
+               6: "options", 7: "l3", 8: "r3", 9: "l1", 10: "r1", 11: "up", 12: "down",
+               13: "left", 14: "right", 20: "touchpad"}
+PAD_TRIGGERS = {4: "l2", 5: "r2"}
+PS_NAMES = set(PAD_BUTTONS.values()) | set(PAD_TRIGGERS.values())
+TRIGGER_ON = 16000               # of 32767: a trigger counts as pressed past about half
+
+
+def _pad_thread(q: queue.Queue, stop: threading.Event):
+    """Poll the first game controller and queue button names. Silent if there's none."""
+    os.environ.setdefault("PYGAME_HIDE_SUPPORT_PROMPT", "1")
+    # chiaki-ng has focus, not us; without this SDL drops controller events.
+    os.environ["SDL_JOYSTICK_ALLOW_BACKGROUND_EVENTS"] = "1"
+    import pygame
+    from pygame._sdl2 import controller
+
+    pygame.display.init()            # event queue needs the video subsystem (no window opens)
+    controller.init()
+    if controller.get_count() == 0:
+        return
+    pad = controller.Controller(0)
+    held = set()
+    while not stop.is_set():
+        for ev in pygame.event.get():
+            if ev.type == pygame.CONTROLLERBUTTONDOWN and ev.button in PAD_BUTTONS:
+                q.put(PAD_BUTTONS[ev.button])
+            elif ev.type == pygame.CONTROLLERAXISMOTION and ev.axis in PAD_TRIGGERS:
+                name = PAD_TRIGGERS[ev.axis]
+                if ev.value > TRIGGER_ON and name not in held:
+                    held.add(name)
+                    q.put(name)
+                elif ev.value < TRIGGER_ON // 2:
+                    held.discard(name)
+        time.sleep(0.01)
+    pad.quit()
+
+
 class Keys:
-    """Background listener feeding key names into a queue."""
+    """Background listeners (keyboard + controller) feeding input names into a queue."""
 
     def __init__(self):
         self.q: queue.Queue[str] = queue.Queue()
         self.listener = keyboard.Listener(on_press=lambda k: self.q.put(_name(k)))
+        self.stop = threading.Event()
+        self.pad = threading.Thread(target=_pad_thread, args=(self.q, self.stop), daemon=True)
 
     def __enter__(self):
         self.listener.start()
+        self.pad.start()
         return self
 
     def __exit__(self, *exc):
+        self.stop.set()
         self.listener.stop()
 
     def next(self) -> str:
@@ -53,47 +99,22 @@ class Keys:
             self.q.get()
 
 
-def _after_key(stream: Stream):
-    time.sleep(0.4)                  # let the stream show the press before settling
-    return stream.settle()[0]
-
-
 def teach_hub(stream: Stream, cfg: dict):
-    hub = cfg["hub"]
     with Keys() as keys:
         print("In chiaki-ng, go to the Dynasty hub (the screen with the L1/R1 tab bar:\n"
-              "Actions, Members, ... Dynasty Central). Select the FIRST tab (Actions),\n"
-              "then press F8.  (F9 aborts.)")
+              "Actions, Members, ... Dynasty Central), any tab, then press F8.  (F9 aborts.)")
         keys.wait_mark()
-        screens.REFS.mkdir(exist_ok=True)
-        first = stream.settle()[0]
-        first.save(screens.ref_path("hub_tab00"))
-        refs = [first]
-        print("Now press R1 once at a time to step through every tab. Stop when you're\n"
-              "back on Actions (or press F8 if the tabs don't wrap around).")
-        keys.drain()
-        r1_key, wraps = None, False
-        while True:
-            key = keys.next()
-            if key == MARK:
-                break
-            frame = _after_key(stream)
-            r1_key = r1_key or key
-            if screens.region_matches(frame, first, hub["tab_box"]):
-                wraps = True
-                break
-            if any(screens.region_matches(frame, r, hub["tab_box"]) for r in refs):
-                continue                                # nothing changed; ignore
-            frame.save(screens.ref_path(f"hub_tab{len(refs):02d}"))
-            refs.append(frame)
-            print(f"  tab {len(refs) - 1} recorded")
-    hub["tabs"] = len(refs)
-    hub["wraps"] = wraps
-    if r1_key:
-        cfg["keymap"]["r1"] = r1_key
+    frame = stream.settle()[0]
+    if screens.highlight_span(frame, cfg["hub"]["tab_box"]) is None:
+        raise SystemExit("Couldn't find the selected tab in the tab bar. Is the hub showing?")
+    screens.REFS.mkdir(exist_ok=True)
+    frame.save(screens.ref_path("hub"))
+    for old in screens.REFS.glob("hub_tab*.png"):      # from the old one-image-per-tab scheme
+        old.unlink()
+    cfg["hub"].pop("tabs", None)
+    cfg["hub"].pop("wraps", None)
     screens.save_config(cfg)
-    print(f"Hub taught: {len(refs)} tabs, R1 is the '{r1_key}' key, "
-          f"{'wraps around' if wraps else 'does not wrap'}.")
+    print("Hub taught (refs/hub.png).")
 
 
 def teach_screen(stream: Stream, cfg: dict, name: str):
@@ -110,7 +131,7 @@ def teach_screen(stream: Stream, cfg: dict, name: str):
         if tab is None:
             raise SystemExit("That doesn't look like the Dynasty hub. Run 'teach hub' again if "
                              "the hub has changed.")
-        print(f"  hub tab {tab}. Now navigate to {name} with the keyboard, then press F8.")
+        print(f"  On the hub. Now navigate to {name} (controller or keyboard), then press F8.")
         keys.drain()
         route = []
         while (key := keys.next()) != MARK:
@@ -126,7 +147,7 @@ def teach_screen(stream: Stream, cfg: dict, name: str):
             back_key = back_key or key
         if nav.hub_tab(stream.settle()[0]) is None:
             print("  warning: that doesn't look like the hub; Circle mapping not saved.")
-        elif back_key:
+        elif back_key and back_key not in PS_NAMES:
             cfg["keymap"]["circle"] = back_key
 
     screen.update(route=route, hub_tab=tab, route_taught=True)

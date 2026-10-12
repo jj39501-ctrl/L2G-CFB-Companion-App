@@ -22,6 +22,10 @@ REFS = ROOT / "refs"
 REGION_DELTA = 40                # grey-level change that counts as a changed pixel
 REGION_MATCH = 0.02              # at most this fraction changed = same region
 MAX_BACK = 8                     # Circle presses allowed when backing out to the hub
+MAX_TABS = 10                    # L1/R1 presses allowed when picking a hub tab
+HIGHLIGHT_LEVEL = 200            # grey level of the selected tab's white box
+MIN_HIGHLIGHT = 0.03             # narrowest highlight, as a fraction of the tab bar
+TAB_TOLERANCE = 0.03             # how close two highlight centres must be to be one tab
 
 
 def load_config() -> dict:
@@ -52,23 +56,65 @@ def ref_path(name: str) -> Path:
     return REFS / f"{name}.png"
 
 
+def highlight_span(img: Image.Image, box):
+    """(start, end) of the selected tab's white box, as fractions of the box width.
+
+    The selected tab is a solid white rectangle; columns that are mostly bright mark
+    it. Returns the widest such run, or None if there's no highlight.
+    """
+    w, h = img.size
+    l, t, r, b = box
+    g = np.asarray(img.crop((int(l * w), int(t * h), int(r * w), int(b * h))).convert("L"))
+    # Inside the box every column is >=30% bright even through the dark label text;
+    # plain white tab labels are thin strokes and stay well under that.
+    bright = (g > HIGHLIGHT_LEVEL).mean(axis=0) > 0.25
+    best, start = None, None
+    for x, on in enumerate(list(bright) + [False]):
+        if on and start is None:
+            start = x
+        elif not on and start is not None:
+            if best is None or x - start > best[1] - best[0]:
+                best = (start, x)
+            start = None
+    if best is None or best[1] - best[0] < MIN_HIGHLIGHT * g.shape[1]:
+        return None
+    return best[0] / g.shape[1], best[1] / g.shape[1]
+
+
 class Navigator:
+    """Hub tabs are identified by where the highlight sits (centre, as a fraction of the
+    tab bar), so any tab of the hub is recognised from one reference image."""
+
     def __init__(self, stream: Stream, cfg: dict):
         self.s, self.cfg = stream, cfg
-        hub = cfg["hub"]
-        self.hub_box = hub["tab_box"]
-        self.hub_refs = [Image.open(ref_path(f"hub_tab{i:02d}")) for i in range(hub.get("tabs", 0))]
+        self.hub_box = cfg["hub"]["tab_box"]
+        path = ref_path("hub")
+        self.hub_ref = Image.open(path) if path.exists() else None
 
-    def hub_tab(self, frame) -> int | None:
-        """Which hub tab is showing, or None if this isn't the hub."""
-        for i, ref in enumerate(self.hub_refs):
-            if region_matches(frame, ref, self.hub_box):
-                return i
-        return None
+    def hub_tab(self, frame) -> float | None:
+        """Centre of the selected hub tab, or None if this isn't the hub.
+
+        It's the hub if the tab bar matches the reference everywhere except where
+        either image has its highlight.
+        """
+        if self.hub_ref is None:
+            return None
+        span = highlight_span(frame, self.hub_box)
+        ref_span = highlight_span(self.hub_ref, self.hub_box)
+        if span is None or ref_span is None:
+            return None
+        a = region_key(frame, self.hub_box)
+        b = region_key(self.hub_ref, self.hub_box, size=(a.shape[1], a.shape[0]))
+        keep = np.ones(a.shape[1], dtype=bool)
+        for s0, s1 in (span, ref_span):
+            keep[int(s0 * a.shape[1]) - 2:int(s1 * a.shape[1]) + 2] = False
+        if float((np.abs(a - b)[:, keep] > REGION_DELTA).mean()) > REGION_MATCH:
+            return None
+        return (span[0] + span[1]) / 2
 
     def to_hub(self):
-        """Back out (Circle) until the hub shows. Returns (frame, fkey, tab index)."""
-        if not self.hub_refs:
+        """Back out (Circle) until the hub shows. Returns (frame, fkey, tab centre)."""
+        if self.hub_ref is None:
             raise RuntimeError("The hub hasn't been taught yet. Run: python -m capture teach hub")
         frame, fk = self.s.settle()
         for _ in range(MAX_BACK + 1):
@@ -84,15 +130,15 @@ class Navigator:
             raise RuntimeError(f"No route for '{name}' yet. Run: python -m capture teach {name}")
         frame, fk, tab = self.to_hub()
         want = screen["hub_tab"]
-        wraps = self.cfg["hub"].get("wraps", True)
-        for _ in range(len(self.hub_refs)):
-            if tab == want:
+        for _ in range(MAX_TABS):
+            if abs(tab - want) <= TAB_TOLERANCE:
                 break
-            button = "r1" if wraps or tab < want else "l1"
-            _, frame, fk = self.s.press_and_wait(button, fk)
+            _, frame, fk = self.s.press_and_wait("r1" if want > tab else "l1", fk)
             tab = self.hub_tab(frame)
-        if tab != want:
-            raise RuntimeError(f"Couldn't select hub tab {want} for '{name}'.")
+            if tab is None:
+                raise RuntimeError("Lost the hub while switching tabs.")
+        else:
+            raise RuntimeError(f"Couldn't select the hub tab for '{name}'.")
         for button in screen["route"]:
             _, frame, fk = self.s.press_and_wait(button, fk)
         frame, fk = self.s.settle()

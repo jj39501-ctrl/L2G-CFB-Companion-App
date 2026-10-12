@@ -15,36 +15,81 @@
     "options": "o"
   },
   "hub": {
-    "tab_box": [0.033, 0.100, 0.527, 0.140],
-    "tabs": 0
+    "tab_box": [
+      0.033,
+      0.1,
+      0.527,
+      0.14
+    ],
+    "tabs": 3,
+    "wraps": true
   },
   "screens": {
     "season_stats": {
       "mode": "table",
-      "verify_box": [0.02, 0.02, 0.45, 0.10],
-      "tab_box": [0.040, 0.165, 0.730, 0.215],
+      "verify_box": [
+        0.02,
+        0.02,
+        0.45,
+        0.1
+      ],
+      "tab_box": [
+        0.04,
+        0.165,
+        0.73,
+        0.215
+      ],
       "tabs": [
-        {"name": "category", "button": "r2", "max": 12}
+        {
+          "name": "category",
+          "button": "r2",
+          "max": 12
+        }
       ],
       "table": {
-        "body_box": [0.040, 0.280, 0.725, 0.895],
+        "body_box": [
+          0.04,
+          0.28,
+          0.725,
+          0.895
+        ],
         "rows_per_page": 11,
         "cols_per_page": 9
       }
     },
     "members": {
       "mode": "table",
-      "verify_box": [0.48, 0.18, 0.78, 0.29],
+      "verify_box": [
+        0.48,
+        0.18,
+        0.78,
+        0.29
+      ],
       "table": {
-        "body_box": [0.035, 0.205, 0.290, 0.845],
+        "body_box": [
+          0.035,
+          0.205,
+          0.29,
+          0.845
+        ],
         "rows_per_page": 5,
         "horizontal": false
       }
     },
-    "schedule": {"mode": "single"},
-    "standings": {"mode": "single"},
-    "top25": {"mode": "single"},
-    "players_of_week": {"mode": "single"},
-    "heisman_watch": {"mode": "single"}
+    "schedule": {
+      "mode": "single"
+    },
+    "standings": {
+      "mode": "single"
+    },
+    "top25": {
+      "mode": "single"
+    },
+    "players_of_week": {
+      "mode": "single"
+    },
+    "heisman_watch": {
+      "mode": "single"
+    }
   }
 }
