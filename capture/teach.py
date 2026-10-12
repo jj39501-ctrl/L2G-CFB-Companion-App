@@ -45,23 +45,22 @@ def _pad_thread(q: queue.Queue, stop: threading.Event):
     import pygame
     from pygame._sdl2 import controller
 
-    pygame.display.init()            # event queue needs the video subsystem (no window opens)
+    pygame.display.init()            # SDL's input pump needs the video subsystem (no window)
     controller.init()
     if controller.get_count() == 0:
         return
     pad = controller.Controller(0)
+    # Poll button states and report rising edges. (Waiting for SDL events missed
+    # presses while chiaki-ng had focus.)
     held = set()
     while not stop.is_set():
-        for ev in pygame.event.get():
-            if ev.type == pygame.CONTROLLERBUTTONDOWN and ev.button in PAD_BUTTONS:
-                q.put(PAD_BUTTONS[ev.button])
-            elif ev.type == pygame.CONTROLLERAXISMOTION and ev.axis in PAD_TRIGGERS:
-                name = PAD_TRIGGERS[ev.axis]
-                if ev.value > TRIGGER_ON and name not in held:
-                    held.add(name)
-                    q.put(name)
-                elif ev.value < TRIGGER_ON // 2:
-                    held.discard(name)
+        pygame.event.pump()
+        down = {name for b, name in PAD_BUTTONS.items() if pad.get_button(b)}
+        down |= {name for a, name in PAD_TRIGGERS.items()
+                 if pad.get_axis(a) > (TRIGGER_ON if name not in held else TRIGGER_ON // 2)}
+        for name in down - held:
+            q.put(name)
+        held = down
         time.sleep(0.01)
     pad.quit()
 
