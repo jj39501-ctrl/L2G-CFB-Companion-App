@@ -10,7 +10,7 @@ import json
 from pathlib import Path
 
 import numpy as np
-from PIL import Image
+from PIL import Image, ImageFilter
 
 from .stream import Stream
 from .table import TableWalker
@@ -26,6 +26,8 @@ MAX_TABS = 10                    # L1/R1 presses allowed when picking a hub tab
 HIGHLIGHT_LEVEL = 200            # grey level of the selected tab's white box
 MIN_HIGHLIGHT = 0.03             # narrowest highlight, as a fraction of the tab bar
 TAB_TOLERANCE = 0.03             # how close two highlight centres must be to be one tab
+COARSE_DELTA = 30                # grey-level change that counts, on the blurred 1/8 crop
+COARSE_MATCH = 0.05              # hub tabs measure <=0.3% changed; other screens ~18%
 
 
 def load_config() -> dict:
@@ -81,6 +83,17 @@ def highlight_span(img: Image.Image, box):
     return best[0] / g.shape[1], best[1] / g.shape[1]
 
 
+def _coarse(img: Image.Image, box) -> np.ndarray:
+    """Blurred greyscale crop at a fixed 1/8-of-1794px-wide scale (window-size independent)."""
+    w, h = img.size
+    l, t, r, b = box
+    crop = img.crop((int(l * w), int(t * h), int(r * w), int(b * h))).convert("L")
+    crop = crop.filter(ImageFilter.GaussianBlur(3 * w / 1794))
+    cw = max(round((r - l) * 1794 / 8), 1)
+    ch = max(round((b - t) * 1009 / 8), 1)
+    return np.asarray(crop.resize((cw, ch)), dtype=np.int16)
+
+
 class Navigator:
     """Hub tabs are identified by where the highlight sits (centre, as a fraction of the
     tab bar), so any tab of the hub is recognised from one reference image."""
@@ -95,7 +108,8 @@ class Navigator:
         """Centre of the selected hub tab, or None if this isn't the hub.
 
         It's the hub if the tab bar matches the reference everywhere except where
-        either image has its highlight.
+        either image has its highlight. Compared blurred and at 1/8 scale, because the
+        other labels shift a few pixels depending on which tab is selected.
         """
         if self.hub_ref is None:
             return None
@@ -103,12 +117,11 @@ class Navigator:
         ref_span = highlight_span(self.hub_ref, self.hub_box)
         if span is None or ref_span is None:
             return None
-        a = region_key(frame, self.hub_box)
-        b = region_key(self.hub_ref, self.hub_box, size=(a.shape[1], a.shape[0]))
+        a, b = _coarse(frame, self.hub_box), _coarse(self.hub_ref, self.hub_box)
         keep = np.ones(a.shape[1], dtype=bool)
         for s0, s1 in (span, ref_span):
-            keep[int(s0 * a.shape[1]) - 2:int(s1 * a.shape[1]) + 2] = False
-        if float((np.abs(a - b)[:, keep] > REGION_DELTA).mean()) > REGION_MATCH:
+            keep[int(s0 * a.shape[1]) - 1:int(s1 * a.shape[1]) + 2] = False
+        if float((np.abs(a - b)[:, keep] > COARSE_DELTA).mean()) > COARSE_MATCH:
             return None
         return (span[0] + span[1]) / 2
 
