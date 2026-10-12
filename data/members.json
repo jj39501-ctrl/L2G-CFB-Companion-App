@@ -1,132 +1,123 @@
 {
  "screen": "members",
- "captured_at": "2026-10-11T23:00:44",
- "source": "2026-10-11_230044",
+ "captured_at": "2026-10-12T17:17:24",
+ "source": "2026-10-12_170058",
  "data": [
   {
    "rows": [
     {
      "gamertag": "Armtesttom3",
      "team_rank": 5,
-     "game": "vs FCS Midwest",
-     "progress": "0/960",
+     "game": "vs Notre Dame",
+     "progress": "70/960",
      "team": "LSU",
-     "opponent": "FCS Midwest",
+     "opponent": "Notre Dame",
      "home": true
     },
     {
      "gamertag": "Gilly is papi",
-     "team_rank": 10,
-     "game": "at 18 Notre Danne",
+     "team_rank": 1,
+     "game": "vs Texas A&M",
      "progress": "960/960",
      "team": "Alabama",
-     "opponent": "Notre Dame",
-     "home": false
-    },
-    {
-     "gamertag": "RichRichie5743",
-     "team_rank": 3,
-     "game": "vs 9 USC",
-     "progress": "0/750",
-     "team": "Georgia",
-     "opponent": "USC",
+     "opponent": "Texas A&M",
      "home": true
     },
     {
-     "gamertag": "Nightfalconn",
-     "team_rank": 20,
-     "game": "W 141-114 at 25 Baylor",
-     "progress": "60/900",
-     "team": "Michigan",
-     "opponent": "Baylor",
+     "gamertag": "01",
+     "team_rank": 1,
+     "game": "at Arkansas",
+     "progress": "70/750",
+     "team": "Georgia",
+     "opponent": "Arkansas",
      "home": false
     },
     {
+     "gamertag": "Nightfalconn",
+     "team_rank": 18,
+     "game": "vs South Carolina",
+     "progress": "65/900",
+     "team": "Michigan",
+     "opponent": "South Carolina",
+     "home": true
+    },
+    {
      "gamertag": "Swarmin26Hornets",
-     "team_rank": 13,
-     "game": "vs 8 Texas Tech",
+     "team_rank": 8,
+     "game": "vs 3 Texas",
      "progress": "1050/1050",
      "team": "Miami",
-     "opponent": "Texas Tech",
+     "opponent": "Texas",
      "home": true
     },
     {
      "gamertag": "casherrill1855",
-     "team_rank": 14,
-     "game": "vs FCS West",
-     "progress": "20/845",
+     "team_rank": 12,
+     "game": "at Alabama",
+     "progress": "70/845",
      "team": "Texas A&M",
-     "opponent": "FCS West",
-     "home": true
+     "opponent": "Alabama",
+     "home": false
     },
     {
      "gamertag": "Slow-Mo-Zay",
-     "team_rank": 2,
-     "game": "W vs FCS Midwest",
-     "progress": "0/1050",
+     "team_rank": 3,
+     "game": "at 8 Miami",
+     "progress": "355/1050",
      "team": "Texas",
-     "opponent": "FCS Midwest",
-     "home": true
+     "opponent": "Miami",
+     "home": false
     },
     {
      "gamertag": "germanagus_2",
      "team_rank": 7,
-     "game": null,
+     "game": "vs FCS Midwest",
      "progress": "780/780",
-     "team": "Florida"
+     "team": "Florida",
+     "opponent": "FCS Midwest",
+     "home": true
     },
     {
      "gamertag": "GoatestofAllTime",
      "team_rank": 6,
-     "game": "W FCS East",
-     "progress": "355/1050",
+     "game": "vs Oregon State",
+     "progress": "560/1050",
      "team": "Oregon",
-     "opponent": "FCS East",
+     "opponent": "Oregon State",
      "home": true
     },
     {
      "gamertag": "Og_laffy7",
-     "team_rank": 1,
-     "game": "at Indiana",
+     "team_rank": 2,
+     "game": null,
      "progress": "85/800",
-     "team": "Ohio State",
-     "opponent": "Indiana",
-     "home": false
+     "team": "Ohio State"
     },
     {
      "gamertag": "NUEVE4413",
-     "team_rank": 18,
-     "game": "vs 10 Alabama",
-     "progress": "0/975",
+     "team_rank": 11,
+     "game": "at LSU",
+     "progress": "25/975",
      "team": "Notre Dame",
-     "opponent": "Alabama",
-     "home": true
+     "opponent": "LSU",
+     "home": false
     },
     {
      "gamertag": "GrandeJefe21",
-     "team_rank": 9,
-     "game": "at 3 Georgia",
-     "progress": "485/1050",
-     "team": "USC",
-     "opponent": "Georgia",
+     "team_rank": null,
+     "game": "at 2 Ohio State",
+     "progress": "500/1050",
+     "team": "a DB wuse",
+     "opponent": "Ohio State",
      "home": false
     },
     {
      "gamertag": "Roljor",
      "team_rank": 4,
-     "game": "W vs Toledo",
-     "progress": "0/550",
+     "game": "at 18 Michigan",
+     "progress": "75/550",
      "team": "South Carolina",
-     "opponent": "Toledo",
-     "home": true
-    },
-    {
-     "gamertag": "OceanDriveHeata",
-     "team_rank": null,
-     "game": "at Penn State",
-     "progress": "0/660",
-     "team": "Florida State",
-     "opponent": "Penn State",
+     "opponent": "Michigan",
      "home": false
     }
    ]
