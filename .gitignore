@@ -2,3 +2,4 @@ __pycache__/
 *.pyc
 # Raw screenshots are large and regenerated every run; the app publishes extracted data.
 captures/
+recordings/

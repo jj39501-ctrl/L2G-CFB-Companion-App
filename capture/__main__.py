@@ -6,6 +6,7 @@
   here <screen>            Capture the screen that's showing now, using its settings.
   run [screen ...]         Visit each taught screen (default: all) and capture it.
   list                     Show the configured screens and whether they're taught.
+  record                   Record a manual session (F8 start/stop): presses + screenshots.
 """
 
 import argparse
@@ -14,7 +15,7 @@ import sys
 import time
 from datetime import datetime
 
-from . import display, screens, teach
+from . import display, record, screens, teach
 from .stream import Stream
 
 
@@ -43,7 +44,7 @@ def write_manifest(run_dir, stream, results):
 
 def main():
     ap = argparse.ArgumentParser(prog="python -m capture")
-    ap.add_argument("command", choices=["check", "teach", "here", "run", "list"])
+    ap.add_argument("command", choices=["check", "teach", "here", "run", "list", "record"])
     ap.add_argument("names", nargs="*")
     ap.add_argument("--fix", action="store_true",
                     help="restore/maximize the chiaki-ng window if it's minimized or too small")
@@ -59,6 +60,10 @@ def main():
     stream = open_stream(cfg, args.fix)
     if args.command == "check":
         print("Ready to capture.")
+        return
+
+    if args.command == "record":
+        record.record(stream)
         return
 
     if args.command == "teach":
