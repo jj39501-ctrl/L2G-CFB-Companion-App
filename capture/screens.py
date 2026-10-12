@@ -23,7 +23,8 @@ REFS = ROOT / "refs"
 REGION_DELTA = 40                # grey-level change that counts as a changed pixel
 REGION_MATCH = 0.02              # at most this fraction changed = same region
 MAX_BACK = 8                     # Circle presses allowed when backing out to the hub
-HUB_WAIT = 3.0                   # seconds to wait for the hub to fade in before pressing again
+ARRIVE_WAIT = 8.0                # seconds a screen may take to load after its route
+HUB_WAIT = 3.0                  # seconds to wait for the hub to fade in before pressing again
 MAX_TABS = 10                   # L1/R1 presses allowed when picking a hub tab
 HIGHLIGHT_LEVEL = 200            # grey level of the selected tab's white box
 MIN_HIGHLIGHT = 0.03             # narrowest highlight, as a fraction of the tab bar
@@ -163,10 +164,16 @@ class Navigator:
             raise RuntimeError(f"Couldn't select the hub tab for '{name}'.")
         for button in screen["route"]:
             _, frame, fk = self.s.press_and_wait(button, fk)
-        frame, fk = self.s.settle()
-        if not region_matches(frame, Image.open(ref_path(name)), screen["verify_box"]):
-            raise RuntimeError(f"Arrived somewhere that doesn't look like '{name}'.")
-        return frame, fk
+        # Screens load for a moment after the last press; keep checking until it matches.
+        ref = Image.open(ref_path(name))
+        deadline = time.time() + ARRIVE_WAIT
+        while True:
+            frame, fk = self.s.settle()
+            if region_matches(frame, ref, screen["verify_box"]):
+                return frame, fk
+            if time.time() > deadline:
+                raise RuntimeError(f"Arrived somewhere that doesn't look like '{name}'.")
+            time.sleep(0.3)
 
 
 def select(stream: Stream, step: dict):

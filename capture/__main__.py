@@ -37,6 +37,7 @@ def write_manifest(run_dir, stream, results):
         "screens": {name: [str(p.relative_to(run_dir)).replace("\\", "/") for p in files]
                     for name, files in results.items()},
     }
+    run_dir.mkdir(parents=True, exist_ok=True)
     (run_dir / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
 
