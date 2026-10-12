@@ -52,13 +52,27 @@
           0.895
         ],
         "rows_per_page": 11,
-        "cols_per_page": 9
+        "cols_per_page": 9,
+        "max_rows": 100
       },
       "route": [
         "cross"
       ],
       "hub_tab": 0.7054176072234764,
-      "route_taught": true
+      "route_taught": true,
+      "select": [
+        {
+          "button": "l2",
+          "ref": "season_stats_national",
+          "box": [
+            0.07,
+            0.168,
+            0.245,
+            0.212
+          ],
+          "max": 40
+        }
+      ]
     },
     "members": {
       "mode": "table",

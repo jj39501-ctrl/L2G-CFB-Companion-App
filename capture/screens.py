@@ -169,8 +169,25 @@ class Navigator:
         return frame, fk
 
 
+def select(stream: Stream, step: dict):
+    """Press step['button'] until the step['box'] region matches refs/<step['ref']>.png."""
+    ref = Image.open(ref_path(step["ref"]))
+    frame, fk = stream.settle()
+    start = frame
+    for i in range(step.get("max", 40)):
+        if region_matches(frame, ref, step["box"]):
+            return
+        moved, frame, fk = stream.press_and_wait(step["button"], fk)
+        if i and region_matches(frame, start, step["box"]):
+            break                                      # went all the way round
+    if not region_matches(frame, ref, step["box"]):
+        raise RuntimeError(f"Couldn't select '{step['ref']}' with {step['button']}.")
+
+
 def capture_here(stream: Stream, screen: dict, out_dir: Path) -> list[Path]:
-    """Capture the screen that's showing now, cycling its tabs if it has any."""
+    """Capture the screen that's showing now: apply its selections, then cycle its tabs."""
+    for step in screen.get("select", []):
+        select(stream, step)
     files: list[Path] = []
     _cycle_tabs(stream, screen, screen.get("tabs", []), out_dir, files)
     return files

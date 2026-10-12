@@ -50,6 +50,10 @@ class TableWalker:
         self.rows_per_page = spec.get("rows_per_page", 11)
         self.cols_per_page = spec.get("cols_per_page", 9)
         self.horizontal = spec.get("horizontal", True)
+        # Stop scrolling down once this many rows have been seen (None = whole list).
+        # rows_per_page + 1 rows are visible, so that many fewer scroll steps are needed.
+        max_rows = spec.get("max_rows")
+        self.max_scroll = None if max_rows is None else max(max_rows - self.rows_per_page - 1, 0)
         self.max_presses = max_presses
 
     def _bk(self, frame):
@@ -70,8 +74,10 @@ class TableWalker:
         """Scroll one way to the end, collecting a frame per screenful (top first)."""
         bk = self._bk(frame)
         pages = [frame]
-        scrolled, stuck = 0, 0
+        scrolled, stuck, total = 0, 0, 0
         for _ in range(self.max_presses):
+            if direction == "down" and self.max_scroll is not None and total >= self.max_scroll:
+                break                                  # seen max_rows rows
             moved, frame, fk = self.s.press_and_wait(direction, fk)
             if not moved:
                 stuck += 1
@@ -82,6 +88,7 @@ class TableWalker:
             nbk = self._bk(frame)
             if not same_body(nbk, bk):                 # table scrolled, not just the highlight
                 scrolled += 1
+                total += 1
             bk = nbk
             if scrolled >= self.rows_per_page:
                 pages.append(frame)
