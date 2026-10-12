@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>L2G Dynasty</title>
+  <meta name="description" content="Read-only companion for the L2G College Football dynasty: scores, standings, rankings, stats and members.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cellipse cx='16' cy='16' rx='14' ry='9' fill='%23c8102e' transform='rotate(-30 16 16)'/%3E%3Cpath d='M10 19l12-6M13 14.5l2 3M16 13l2 3M19 11.5l2 3' stroke='white' stroke-width='1.6'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="#/">
+        <span class="brand-mark">L2G</span>
+        <span class="brand-text">Dynasty <small id="season-label"></small></span>
+      </a>
+      <button class="menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="nav">
+        <span></span><span></span><span></span>
+      </button>
+      <nav id="nav">
+        <a href="#/">Home</a>
+        <a href="#/scores">Scores</a>
+        <a href="#/top25">Top 25</a>
+        <a href="#/standings">Standings</a>
+        <a href="#/stats">Stats</a>
+        <a href="#/awards">Awards</a>
+        <a href="#/members">Members</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap" id="view" aria-live="polite">
+    <p class="loading">Loading…</p>
+  </main>
+
+  <footer class="wrap foot">
+    <span id="updated"></span>
+    <span>Read-only · data captured from the game</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>

@@ -65,17 +65,24 @@ def main():
             meta[screen] = {"captured_at": captured_at, "source": folder.parent.name}
             print(f"{screen}: {len(results[screen])} part(s), {time.time() - t0:.0f}s", flush=True)
 
-    # Links need the other screens' data: load what wasn't re-extracted this time.
-    for screen in ("schedule", "top25"):
-        if screen not in results and (DATA / f"{screen}.json").exists():
-            results[screen] = json.loads((DATA / f"{screen}.json").read_text(encoding="utf-8"))["data"]
+    # Links span screens: load the saved data of screens not re-extracted this time,
+    # link everything, and rewrite all of them (a new Top 25 updates schedule ranks).
+    extracted = set(results)
+    for screen in EXTRACTORS:
+        path = DATA / f"{screen}.json"
+        if screen not in results and path.exists():
+            saved = json.loads(path.read_text(encoding="utf-8"))
+            results[screen] = saved["data"]
+            meta[screen] = {"captured_at": saved["captured_at"], "source": saved["source"]}
+    link.ranks_from_top25(results)
     link.member_teams(results)
 
     review_path = DATA / "review.json"
     review = json.loads(review_path.read_text(encoding="utf-8")) if review_path.exists() else {}
     for screen in meta:
         flags = [f for part in results[screen] for f in part.pop("flags", [])]
-        review[screen] = flags
+        if screen in extracted or flags:
+            review[screen] = flags
         out = {"screen": screen, **meta[screen], "data": results[screen]}
         (DATA / f"{screen}.json").write_text(json.dumps(out, indent=1) + "\n", encoding="utf-8")
         print(f"  {screen}: {len(flags)} to review")

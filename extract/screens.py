@@ -121,7 +121,11 @@ def standings(folder: Path, pool=None) -> list[dict]:
                 flags.append({"problem": "unknown team", "read": r.get("TEAM")})
             row = {"team": team, "rank": rank}
             for h in headers[1:]:
-                row[h.lower().replace(" ", "_")] = _num(r.get(h))
+                v = r.get(h) or ""
+                if h in ("CONF", "W-L", "HOME"):              # records: the highlight row can lose its "-"
+                    row[h.lower()] = re.sub(r"^(\d)(\d)$", r"\1-\2", v) or None
+                else:
+                    row[h.lower().replace(" ", "_")] = _num(v)
             out.append(row)
         parts.append({"conference": snap(label(files[0], LEFT_LABEL), CONFERENCES[:-1]),
                       "rows": out, "flags": flags})
@@ -230,9 +234,21 @@ def _card(img: Image.Image, box) -> dict:
 
 
 def _stat_line(t: str) -> str:
-    """'IOTKL, ITFL' -> '10 TKL, 1 TFL': I/O misread for 1/0 before a stat abbreviation."""
-    t = re.sub(r"\b([IO0-9]+)(?=[A-Z]{2,})", lambda m: m.group(1).replace("I", "1").replace("O", "0") + " ", t)
+    """'IOTKL, ITFL' -> '10 TKL, 1 TFL': a count glued to its stat, with 1/0 read as I/O.
+    Only when the rest is a known stat ('INT' itself stays INT)."""
+    def split(m):
+        word = m.group()
+        for k in range(1, len(word)):
+            head, tail = word[:k], word[k:]
+            if tail in STAT_WORDS and word not in STAT_WORDS and re.fullmatch(r"[IO0-9]+", head):
+                return head.replace("I", "1").replace("O", "0") + " " + tail
+        return word
+    t = re.sub(r"\b[A-Z0-9]+\b", split, t)
     return re.sub(r"\s+", " ", t).strip()
+
+
+STAT_WORDS = {"TKL", "TFL", "INT", "PBU", "FF", "FR", "SACK", "SACKS", "TD", "YDS", "CAR", "REC",
+              "YPA", "PASS", "RUSH", "AVG", "FUM", "SFTY", "BLK"}
 
 
 def players_of_week(folder: Path, pool=None) -> list[dict]:

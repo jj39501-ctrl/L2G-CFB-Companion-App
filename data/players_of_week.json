@@ -15,7 +15,7 @@
      "outcome": "W",
      "score": "17-10"
     },
-    "stats": "7 TKL, 3 1 NT, 2 PBU"
+    "stats": "7 TKL, 3 INT, 2 PBU"
    },
    "offensive": {
     "name": "C.J. Easy",
@@ -26,7 +26,7 @@
      "outcome": "W",
      "score": "58-23"
     },
-    "stats": "16-24, 324 PASS YDS, 13.5 YPA, 2 PASS TD, 1 1 NT, 23 CAR, 191 RUSH YDS, 5 RUSH TD"
+    "stats": "16-24, 324 PASS YDS, 13.5 YPA, 2 PASS TD, 1 INT, 23 CAR, 191 RUSH YDS, 5 RUSH TD"
    }
   },
   {
@@ -52,7 +52,7 @@
      "outcome": "W",
      "score": "58-23"
     },
-    "stats": "16-24, 324 PASS YDS, 13.5 YPA, 2 PASS TD, 1 1 NT, 23 CAR, 191 RUSH YDS, 5 RUSH TD"
+    "stats": "16-24, 324 PASS YDS, 13.5 YPA, 2 PASS TD, 1 INT, 23 CAR, 191 RUSH YDS, 5 RUSH TD"
    }
   },
   {
@@ -67,7 +67,7 @@
      "outcome": "W",
      "score": "17-10"
     },
-    "stats": "7 TKL, 3 1 NT, 2 PBU"
+    "stats": "7 TKL, 3 INT, 2 PBU"
    },
    "offensive": {
     "name": "Lloyd Jones III",
@@ -93,7 +93,7 @@
      "outcome": "W",
      "score": "35-21"
     },
-    "stats": "10 TKL, 1 1 NT, 3 PBU"
+    "stats": "10 TKL, 1 INT, 3 PBU"
    },
    "offensive": {
     "name": "Byrd Ficklin",
@@ -119,7 +119,7 @@
      "outcome": "W",
      "score": "36-0"
     },
-    "stats": "7 TKL, 1 1 NT, 1 PBU, 1 TD"
+    "stats": "7 TKL, 1 INT, 1 PBU, 1 TD"
    },
    "offensive": {
     "name": "Eli Holstein",
@@ -197,7 +197,7 @@
      "outcome": "L",
      "score": "35-10"
     },
-    "stats": "10 TKL, 0.5 SACKS, 1 TFL, 1 1 NT, 2 PBU"
+    "stats": "10 TKL, 0.5 SACKS, 1 TFL, 1 INT, 2 PBU"
    },
    "offensive": {
     "name": "Cade Brooks",
@@ -223,7 +223,7 @@
      "outcome": "W",
      "score": "45-7"
     },
-    "stats": "3 TKL, 1 1 NT, 1 PBU, 1 FF"
+    "stats": "3 TKL, 1 INT, 1 PBU, 1 FF"
    },
    "offensive": {
     "name": "Triston White",
@@ -249,7 +249,7 @@
      "outcome": "W",
      "score": "28-10"
     },
-    "stats": "6 TKL, 1 1 NT, 2 PBU, 1 TD"
+    "stats": "6 TKL, 1 INT, 2 PBU, 1 TD"
    },
    "offensive": {
     "name": "Colton Joseph",
@@ -275,7 +275,7 @@
      "outcome": "W",
      "score": "24-14"
     },
-    "stats": "8 TKL, 0.5 SACKS, 1 TFL, 1 1 NT, 1 PBU, 1 TD"
+    "stats": "8 TKL, 0.5 SACKS, 1 TFL, 1 INT, 1 PBU, 1 TD"
    },
    "offensive": {
     "name": "Mitch Sanderson",
@@ -301,7 +301,7 @@
      "outcome": "W",
      "score": "31-17"
     },
-    "stats": "6 TKL, 2 1 NT, 2 PBU"
+    "stats": "6 TKL, 2 INT, 2 PBU"
    },
    "offensive": {
     "name": "Kristian Tate",

@@ -9,7 +9,7 @@
     {
      "team": "Michigan",
      "rank": 20,
-     "conf": 0,
+     "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
      "w-l": "0-1",
@@ -64,7 +64,7 @@
     },
     {
      "team": "South Carolina",
-     "rank": null,
+     "rank": 4,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -106,7 +106,7 @@
     },
     {
      "team": "Alabama",
-     "rank": null,
+     "rank": 10,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -134,7 +134,7 @@
     },
     {
      "team": "Notre Dame",
-     "rank": 8,
+     "rank": 18,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -367,7 +367,7 @@
      "conf": "0-1",
      "cpf": 20,
      "cpa": 24,
-     "w-l": 1,
+     "w-l": "0-1",
      "pct": 0.0,
      "pf": 20,
      "pa": 24,
@@ -383,7 +383,7 @@
     {
      "team": "Appalachian State",
      "rank": null,
-     "conf": 0,
+     "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
      "w-l": "1-0",
@@ -602,7 +602,7 @@
     },
     {
      "team": "Oregon",
-     "rank": null,
+     "rank": 6,
      "conf": "1-0",
      "cpf": 58,
      "cpa": 23,
@@ -630,7 +630,7 @@
     },
     {
      "team": "Ohio State",
-     "rank": null,
+     "rank": 1,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -714,7 +714,7 @@
     },
     {
      "team": "Texas A&M",
-     "rank": null,
+     "rank": 14,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -742,7 +742,7 @@
     },
     {
      "team": "Syracuse",
-     "rank": null,
+     "rank": 23,
      "conf": "0-1",
      "cpf": 28,
      "cpa": 35,
@@ -1004,7 +1004,7 @@
     },
     {
      "team": "Baylor",
-     "rank": null,
+     "rank": 25,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -1150,7 +1150,7 @@
     {
      "team": "Duke",
      "rank": null,
-     "conf": 0,
+     "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
      "w-l": "1-0",
@@ -1177,7 +1177,7 @@
     },
     {
      "team": "Nebraska",
-     "rank": 1,
+     "rank": 11,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -1275,7 +1275,7 @@
     },
     {
      "team": "Virginia",
-     "rank": 7,
+     "rank": 17,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -1496,10 +1496,10 @@
     {
      "team": "UConn",
      "rank": null,
-     "conf": 0,
+     "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
-     "w-l": 1,
+     "w-l": "0-1",
      "pct": 0.0,
      "pf": 23,
      "pa": 37,
@@ -1837,7 +1837,7 @@
     {
      "team": "Western Michigan",
      "rank": null,
-     "conf": 1,
+     "conf": "0-1",
      "cpf": 7,
      "cpa": 24,
      "w-l": "0-1",
@@ -1865,7 +1865,7 @@
      "pa": 7,
      "diff": 13,
      "mov": 13.0,
-     "home": 0
+     "home": "0-0"
     },
     {
      "team": "Wyoming",
@@ -1897,7 +1897,7 @@
     },
     {
      "team": "Nevada",
-     "rank": 4,
+     "rank": null,
      "conf": "0-0",
      "cpf": 0,
      "cpa": 0,
@@ -2183,7 +2183,7 @@
     {
      "team": "Washington State",
      "rank": null,
-     "conf": 1,
+     "conf": "0-1",
      "cpf": 17,
      "cpa": 45,
      "w-l": "0-1",

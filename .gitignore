@@ -3,3 +3,5 @@ __pycache__/
 # Raw screenshots are large and regenerated every run; the app publishes extracted data.
 captures/
 recordings/
+_site/
+.claude/

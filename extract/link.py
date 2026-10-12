@@ -11,6 +11,30 @@ import re
 from . import fix
 
 
+def ranks_from_top25(results: dict):
+    """Rankings shown next to team names (schedule, standings, Heisman) are just the
+    current Top 25, which is extracted cleanly; the small numbers beside logos often
+    aren't. So take every such ranking from the poll."""
+    poll = results.get("top25")
+    if not poll:
+        return
+    rank = {r["team"]: r["rank"] for r in poll[0]["rows"]}
+    for part in results.get("schedule") or []:
+        seen, games = set(), []
+        for g in part["games"]:
+            g["away_rank"], g["home_rank"] = rank.get(g["away"]), rank.get(g["home"])
+            if (g["away"], g["home"]) not in seen:          # a row read twice with different junk
+                seen.add((g["away"], g["home"]))
+                games.append(g)
+        part["games"] = games
+    for part in results.get("standings") or []:
+        for r in part["rows"]:
+            r["rank"] = rank.get(r["team"])
+    for part in results.get("heisman_watch") or []:
+        for r in part["rows"]:
+            r["team_rank"] = rank.get(r["team"])
+
+
 def _opponent(game: str):
     """(opponent, side) where side is 'away' (member plays at the opponent), 'home', or None
     when the at/vs was lost."""

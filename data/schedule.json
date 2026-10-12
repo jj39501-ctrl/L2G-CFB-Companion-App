@@ -39,7 +39,7 @@
     },
     {
      "away": "FCS Midwest",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "Eastern Michigan",
      "home_rank": null,
      "neutral": false,
@@ -49,7 +49,7 @@
     },
     {
      "away": "Nevada",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "Wisconsin",
      "home_rank": null,
      "neutral": false,
@@ -119,17 +119,7 @@
     },
     {
      "away": "Iowa",
-     "away_rank": 7,
-     "home": "Iowa State",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "1:00 PM",
-     "final": null
-    },
-    {
-     "away": "Iowa",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "Iowa State",
      "home_rank": null,
      "neutral": false,
@@ -139,7 +129,7 @@
     },
     {
      "away": "USC",
-     "away_rank": 3,
+     "away_rank": 9,
      "home": "Georgia",
      "home_rank": 3,
      "neutral": false,
@@ -171,7 +161,7 @@
      "away": "West Virginia",
      "away_rank": null,
      "home": "TCU",
-     "home_rank": 2,
+     "home_rank": 21,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "1:00 PM",
@@ -239,16 +229,6 @@
     },
     {
      "away": "Sam Houston",
-     "away_rank": 4,
-     "home": "Charlotte",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "2:15 PM",
-     "final": null
-    },
-    {
-     "away": "Sam Houston",
      "away_rank": null,
      "home": "Charlotte",
      "home_rank": null,
@@ -299,7 +279,7 @@
     },
     {
      "away": "FCS Midwest",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "SMU",
      "home_rank": null,
      "neutral": false,
@@ -341,7 +321,7 @@
      "away": "FCS East",
      "away_rank": null,
      "home": "USF",
-     "home_rank": 7,
+     "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "3:00 PM",
@@ -349,7 +329,7 @@
     },
     {
      "away": "FCS Midwest",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "LSU",
      "home_rank": 5,
      "neutral": false,
@@ -361,16 +341,6 @@
      "away": "North Carolina",
      "away_rank": null,
      "home": "Bowling Green",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "3:00 PM",
-     "final": null
-    },
-    {
-     "away": "FCS Midwest",
-     "away_rank": null,
-     "home": "Western Kentucky",
      "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
@@ -401,7 +371,7 @@
      "away": "NC State",
      "away_rank": null,
      "home": "East Carolina",
-     "home_rank": 2,
+     "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "3:15 PM",
@@ -451,7 +421,7 @@
      "away": "FCS West",
      "away_rank": null,
      "home": "Western Michigan",
-     "home_rank": 2,
+     "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "4:00 PM",
@@ -479,18 +449,8 @@
     },
     {
      "away": "FCS Midwest",
-     "away_rank": 7,
-     "home": "Colorado",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "5:00 PM",
-     "final": null
-    },
-    {
-     "away": "Rutgers",
      "away_rank": null,
-     "home": "Missouri",
+     "home": "Colorado",
      "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
@@ -551,7 +511,7 @@
      "away": "Alabama",
      "away_rank": 10,
      "home": "Notre Dame",
-     "home_rank": null,
+     "home_rank": 18,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "5:45 PM",
@@ -569,7 +529,7 @@
     },
     {
      "away": "FCS Midwest",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "Texas",
      "home_rank": 2,
      "neutral": false,
@@ -623,18 +583,8 @@
      "final": null
     },
     {
-     "away": "Louisiana",
-     "away_rank": null,
-     "home": "North Dakota State",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "6:00 PM",
-     "final": null
-    },
-    {
      "away": "FCS Midwest",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "BYU",
      "home_rank": null,
      "neutral": false,
@@ -656,7 +606,7 @@
      "away": "FCS Northwest",
      "away_rank": null,
      "home": "Clemson",
-     "home_rank": 4,
+     "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "6:00 PM",
@@ -694,7 +644,7 @@
     },
     {
      "away": "FCS Midwest",
-     "away_rank": 7,
+     "away_rank": null,
      "home": "Maryland",
      "home_rank": null,
      "neutral": false,
@@ -714,7 +664,7 @@
     },
     {
      "away": "FCS Northwest",
-     "away_rank": 4,
+     "away_rank": null,
      "home": "San Jose State",
      "home_rank": null,
      "neutral": false,
@@ -730,16 +680,6 @@
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "6:45 PM",
-     "final": null
-    },
-    {
-     "away": "Liberty",
-     "away_rank": null,
-     "home": "Kennesaw State",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "7:00 PM",
      "final": null
     },
     {
@@ -776,7 +716,7 @@
      "away": "FCS Northwest",
      "away_rank": null,
      "home": "Army",
-     "home_rank": 2,
+     "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "7:00 PM",
@@ -786,7 +726,7 @@
      "away": "FCS East",
      "away_rank": null,
      "home": "Delaware",
-     "home_rank": 2,
+     "home_rank": null,
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "7:00 PM",
@@ -860,46 +800,6 @@
      "neutral": false,
      "date": "Sat, Sep 11",
      "time": "9:00 PM",
-     "final": null
-    },
-    {
-     "away": "Florida International",
-     "away_rank": null,
-     "home": "Syracuse",
-     "home_rank": 23,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "7:30 PM",
-     "final": null
-    },
-    {
-     "away": "FCS West",
-     "away_rank": null,
-     "home": "California",
-     "home_rank": 22,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "7:30 PM",
-     "final": null
-    },
-    {
-     "away": "FCS East",
-     "away_rank": null,
-     "home": "UL Monroe",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "7:30 PM",
-     "final": null
-    },
-    {
-     "away": "UAB",
-     "away_rank": null,
-     "home": "New Mexico State",
-     "home_rank": null,
-     "neutral": false,
-     "date": "Sat, Sep 11",
-     "time": "7:30 PM",
      "final": null
     },
     {
