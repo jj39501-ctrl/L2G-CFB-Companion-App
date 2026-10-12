@@ -19,7 +19,7 @@ Conference Standings, Players of the Week, Heisman Watch, Members.
 ## Weekly update
 
 1. Open chiaki-ng, connect to the PS5, maximize the stream, go to the Dynasty hub.
-2. Capture every screen (about 40 minutes; hands off the controller):
+2. Capture every screen (about 15-20 minutes; hands off the controller):
    ```
    python -m capture run
    ```
