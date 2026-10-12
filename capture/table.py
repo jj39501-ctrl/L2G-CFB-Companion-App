@@ -37,10 +37,10 @@ def body_key(frame: Image.Image, body_box) -> np.ndarray:
     return np.where(a > TEXT_LEVEL, 255, 0).astype(np.int16)   # keep only the text
 
 
-def same_body(a: np.ndarray, b: np.ndarray) -> bool:
+def same_body(a: np.ndarray, b: np.ndarray, threshold: float = CHANGED_FRACTION) -> bool:
     if a.shape != b.shape:
         return False
-    return (np.abs(a - b) > PIXEL_DELTA).mean() <= CHANGED_FRACTION
+    return (np.abs(a - b) > PIXEL_DELTA).mean() <= threshold
 
 
 class TableWalker:
@@ -50,6 +50,9 @@ class TableWalker:
         self.rows_per_page = spec.get("rows_per_page", 11)
         self.cols_per_page = spec.get("cols_per_page", 9)
         self.horizontal = spec.get("horizontal", True)
+        # Tables with logos change more under the moving highlight (schedule ~0.4%)
+        # than plain-text ones (stats ~0.1%), so the scroll cut-off is per table.
+        self.change = spec.get("change_fraction", CHANGED_FRACTION)
         # Stop scrolling down once this many rows have been seen (None = whole list).
         # rows_per_page + 1 rows are visible, so that many fewer scroll steps are needed.
         max_rows = spec.get("max_rows")
@@ -86,7 +89,7 @@ class TableWalker:
                 continue
             stuck = 0
             nbk = self._bk(frame)
-            if not same_body(nbk, bk):                 # table scrolled, not just the highlight
+            if not same_body(nbk, bk, self.change):                 # table scrolled, not just the highlight
                 scrolled += 1
                 total += 1
             bk = nbk
@@ -112,7 +115,7 @@ class TableWalker:
                 continue
             stuck = 0
             nbk = self._bk(frame)
-            if not same_body(nbk, bk):
+            if not same_body(nbk, bk, self.change):
                 scrolled += 1
             bk = nbk
             if scrolled >= self.cols_per_page:

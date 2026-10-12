@@ -91,22 +91,167 @@
         ],
         "rows_per_page": 5,
         "horizontal": false
-      }
+      },
+      "hub_tab": 0.19883966244725737,
+      "route": [],
+      "route_taught": true
     },
     "schedule": {
-      "mode": "single"
+      "mode": "table",
+      "verify_box": [
+        0.07,
+        0.025,
+        0.4,
+        0.085
+      ],
+      "hub_tab": 0.3560126582278481,
+      "route": [
+        "@top",
+        "down",
+        "cross"
+      ],
+      "route_taught": true,
+      "table": {
+        "body_box": [
+          0.04,
+          0.28,
+          0.725,
+          0.895
+        ],
+        "rows_per_page": 11,
+        "horizontal": false,
+        "change_fraction": 0.012
+      }
     },
     "standings": {
-      "mode": "single"
+      "mode": "table",
+      "verify_box": [
+        0.07,
+        0.025,
+        0.4,
+        0.085
+      ],
+      "hub_tab": 0.3560126582278481,
+      "route": [
+        "@top",
+        "down",
+        "down",
+        "down",
+        "cross"
+      ],
+      "route_taught": true,
+      "tab_box": [
+        0.07,
+        0.165,
+        0.26,
+        0.225
+      ],
+      "tabs": [
+        {
+          "name": "conference",
+          "buttons": [
+            "l2",
+            "down"
+          ],
+          "wait": 1.5,
+          "max": 20
+        }
+      ],
+      "table": {
+        "body_box": [
+          0.04,
+          0.28,
+          0.725,
+          0.895
+        ],
+        "rows_per_page": 11,
+        "horizontal": false,
+        "change_fraction": 0.012
+      }
     },
     "top25": {
-      "mode": "single"
+      "mode": "table",
+      "verify_box": [
+        0.07,
+        0.025,
+        0.4,
+        0.085
+      ],
+      "hub_tab": 0.3560126582278481,
+      "route": [
+        "@top",
+        "down",
+        "down",
+        "cross"
+      ],
+      "route_taught": true,
+      "table": {
+        "body_box": [
+          0.04,
+          0.28,
+          0.725,
+          0.895
+        ],
+        "rows_per_page": 11,
+        "horizontal": false,
+        "change_fraction": 0.012
+      }
     },
     "players_of_week": {
-      "mode": "single"
+      "mode": "single",
+      "verify_box": [
+        0.07,
+        0.025,
+        0.4,
+        0.085
+      ],
+      "hub_tab": 0.3560126582278481,
+      "route": [
+        "@top",
+        "down",
+        "down",
+        "down",
+        "down",
+        "cross"
+      ],
+      "route_taught": true,
+      "tab_box": [
+        0.07,
+        0.165,
+        0.26,
+        0.225
+      ],
+      "tabs": [
+        {
+          "name": "conference",
+          "buttons": [
+            "l2",
+            "down"
+          ],
+          "wait": 1.5,
+          "max": 20
+        }
+      ]
     },
     "heisman_watch": {
-      "mode": "single"
+      "mode": "single",
+      "verify_box": [
+        0.135,
+        0.025,
+        0.4,
+        0.085
+      ],
+      "hub_tab": 0.3560126582278481,
+      "route": [
+        "@top",
+        "down",
+        "down",
+        "down",
+        "down",
+        "down",
+        "cross"
+      ],
+      "route_taught": true
     }
   }
 }

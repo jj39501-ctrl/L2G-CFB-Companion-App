@@ -163,6 +163,12 @@ class Navigator:
         else:
             raise RuntimeError(f"Couldn't select the hub tab for '{name}'.")
         for button in screen["route"]:
+            if button == "@top":                       # menus remember their cursor: reset it
+                stuck = 0
+                while stuck < 2:
+                    moved, frame, fk = self.s.press_and_wait("up", fk)
+                    stuck = 0 if moved else stuck + 1
+                continue
             _, frame, fk = self.s.press_and_wait(button, fk)
         # Screens load for a moment after the last press; keep checking until it matches.
         ref = Image.open(ref_path(name))
@@ -210,7 +216,15 @@ def _cycle_tabs(stream, screen, tabs, out_dir, files):
     for i in range(tab.get("max", 20)):
         print(f"    {tab['name']} {i}", flush=True)
         _cycle_tabs(stream, screen, rest, out_dir / f"{tab['name']}{i:02d}", files)
-        moved, frame, fk = stream.press_and_wait(tab["button"], fk)
+        # A tab step is one button (R2 = next category) or a sequence (L2 opens a
+        # drop-down, Down picks the next entry, which loads after a short wait).
+        moved = False
+        for button in tab.get("buttons", [tab.get("button")]):
+            m, frame, fk = stream.press_and_wait(button, fk)
+            moved = moved or m
+        if tab.get("wait"):
+            time.sleep(tab["wait"])
+            frame, fk = stream.settle()
         if not moved or region_matches(frame, first, screen["tab_box"]):
             break                                      # only one tab, or wrapped to the first
 
