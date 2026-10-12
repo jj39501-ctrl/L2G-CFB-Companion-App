@@ -11,7 +11,7 @@ from pathlib import Path
 import numpy as np
 from PIL import Image
 
-from .stream import Stream
+from .stream import FRAME_CHANGED, Stream, frame_diff
 
 STUCK_LIMIT = 2                  # presses with no effect before we call it the edge
 TEXT_LEVEL = 150                 # grey level above which a (normalised) pixel is text
@@ -43,6 +43,22 @@ def same_body(a: np.ndarray, b: np.ndarray, threshold: float = CHANGED_FRACTION)
     return (np.abs(a - b) > PIXEL_DELTA).mean() <= threshold
 
 
+def row_shift(prev: np.ndarray, cur: np.ndarray, direction: str, pitch: float, max_rows: int) -> int:
+    """How many rows the table scrolled between two body keys, found by sliding one over
+    the other. Down: content moves up (cur[y] == prev[y + d])."""
+    if prev.shape != cur.shape:
+        return 0
+    a, b = (prev, cur) if direction == "down" else (cur, prev)
+    a, b = a[:, ::2] > 0, b[:, ::2] > 0                  # half width is plenty; booleans are fast
+    h = a.shape[0]
+    best_d, best = 0, None
+    for d in range(0, min(int((max_rows + 0.5) * pitch), h - int(pitch))):
+        diff = np.count_nonzero(a[d:] != b[:h - d]) / (h - d)
+        if best is None or diff < best:
+            best_d, best = d, diff
+    return int(round(best_d / pitch))
+
+
 class TableWalker:
     def __init__(self, stream: Stream, spec: dict, max_presses: int = 400):
         self.s = stream
@@ -58,6 +74,10 @@ class TableWalker:
         max_rows = spec.get("max_rows")
         self.max_scroll = None if max_rows is None else max(max_rows - self.rows_per_page - 1, 0)
         self.max_presses = max_presses
+        # Taps per burst: one less than a screenful, so frames overlap by about two rows.
+        burst = spec.get("burst", True)
+        self.burst = (self.rows_per_page - 1 if burst is True else int(burst)) if burst else 0
+        self.row_pitch = spec.get("row_pitch")          # picture fraction; default: even rows
         # Watch the table panel (header + rows) for responses to presses, not the whole
         # picture: the background can animate. Column-cursor moves show in the header.
         l, t, r, b = self.body_box
@@ -78,7 +98,48 @@ class TableWalker:
         return self.s.settle(box=self.watch)
 
     def vertical_pass(self, direction, frame, fk):
-        """Scroll one way to the end, collecting a frame per screenful (top first)."""
+        if self.burst:
+            return self.burst_pass(direction, frame, fk)
+        return self.step_pass(direction, frame, fk)
+
+    def burst_pass(self, direction, frame, fk):
+        """Scroll one way to the end in bursts: tap `burst` times without waiting, settle
+        once, save. A burst is less than a screenful, so consecutive frames always
+        overlap; a dropped tap only makes the overlap bigger. How far the table actually
+        moved is measured from the images (row_shift), which also drives max_rows."""
+        bk = self._bk(frame)
+        pages = [frame]
+        total = 0
+        for _ in range(self.max_presses // self.burst + 1):
+            if direction == "down" and self.max_scroll is not None and total >= self.max_scroll:
+                break
+            before = fk
+            self.s.tap(direction, self.burst)
+            frame, fk = self.s.settle(box=self.watch)
+            if frame_diff(fk, before) <= FRAME_CHANGED:
+                # Nothing moved: confirm with one watched press before calling it the end.
+                moved, frame, fk = self.s.press_and_wait(direction, fk, self.watch)
+                if not moved:
+                    break
+            nbk = self._bk(frame)
+            rows = row_shift(bk, nbk, direction, self.pitch(nbk), self.burst + 1)
+            if rows > 0:
+                pages.append(frame)
+                total += rows
+                bk = nbk
+        if direction == "up":
+            pages.reverse()
+        return frame, fk, pages
+
+    def pitch(self, bk) -> float:
+        """Row spacing in body_key pixels."""
+        if self.row_pitch:
+            return self.row_pitch / (self.body_box[3] - self.body_box[1]) * bk.shape[0]
+        return bk.shape[0] / (self.rows_per_page + 1)
+
+    def step_pass(self, direction, frame, fk):
+        """Scroll one way to the end, one watched press at a time (slow; kept as a fallback
+        for tables where bursts misbehave: "burst": false in config)."""
         bk = self._bk(frame)
         pages = [frame]
         scrolled, stuck, total = 0, 0, 0

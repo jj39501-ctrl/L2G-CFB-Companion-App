@@ -17,8 +17,8 @@ from . import link, screens, stats
 ROOT = Path(__file__).resolve().parent.parent
 DATA = ROOT / "data"
 EXTRACTORS = {
-    "season_stats": lambda folder, pool: [stats.extract_category(c, pool)
-                                          for c in sorted(folder.glob("category*"))],
+    "season_stats": lambda folder, pool: stats.fill_positions(
+        [stats.extract_category(c, pool) for c in sorted(folder.glob("category*"))]),
     "top25": screens.top25,
     "standings": screens.standings,
     "schedule": screens.schedule,

@@ -131,7 +131,7 @@ UNLV
 USC
 Utah
 Utah State
-UTEP
+UTEP = UTED
 UTSA
 USF
 Vanderbilt

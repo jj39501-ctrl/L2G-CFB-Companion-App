@@ -64,6 +64,7 @@ def text(t: str) -> str:
     t = re.sub(r"\b[A-Za-z]+\b", lambda m: UPPER.get(m.group().capitalize(), m.group()), t)
     t = re.sub(r"^w(?= \d)", "W", t)
     t = re.sub(r"\bl(?=[a-z]{2})", "I", t)                           # lowa -> Iowa
+    t = re.sub(r"\b(\d{1,2})(?=[A-Z][a-z])", r"\1 ", t)              # rank glued on: 22California
     return t.strip(" |[]{}~`_=")
 
 

@@ -1,7 +1,7 @@
 {
  "screen": "schedule",
- "captured_at": "2026-10-11T23:22:28",
- "source": "2026-10-11_230902",
+ "captured_at": "2026-10-12T09:41:03",
+ "source": "2026-10-12_094005",
  "data": [
   {
    "week": "Week 2",
@@ -514,8 +514,13 @@
      "home_rank": 18,
      "neutral": false,
      "date": "Sat, Sep 11",
-     "time": "5:45 PM",
-     "final": null
+     "time": null,
+     "final": {
+      "winner": "ND",
+      "winner_score": 41,
+      "loser": "BAMA",
+      "loser_score": 35
+     }
     },
     {
      "away": "FCS Southeast",

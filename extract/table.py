@@ -71,8 +71,11 @@ def locate(img: Image.Image, layout: Layout) -> Located:
     hx0, hy0, hx1, hy1 = _px(layout.header_box)
     head = _ink_image(img.crop((hx0, hy0, hx1, hy1)).convert("L"))
     d = pytesseract.image_to_data(head, config="--psm 7", output_type=pytesseract.Output.DICT)
+    # Pure-symbol "words" are the sort arrow misread ("= �"); dropping them stops it
+    # bridging two headers into one. "%" stays (it's part of "TD %").
     words = [(d["left"][i] / 2, (d["left"][i] + d["width"][i]) / 2, d["text"][i].strip())
-             for i in range(len(d["text"])) if d["text"][i].strip()]
+             for i in range(len(d["text"]))
+             if any(c.isalnum() or c == "%" for c in d["text"][i])]
     spans = []
     for l, r, t in words:
         # Merge close words ("TD %"), but never into the frozen text columns: a

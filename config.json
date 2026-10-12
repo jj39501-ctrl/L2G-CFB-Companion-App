@@ -91,7 +91,9 @@
           0.845
         ],
         "rows_per_page": 5,
-        "horizontal": false
+        "horizontal": false,
+        "row_pitch": 0.1157,
+        "burst": false
       },
       "hub_tab": 0.19883966244725737,
       "route": [],

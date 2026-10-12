@@ -12,7 +12,9 @@ from .display import Display
 # Timing. The stream lags a key press by ~0.2s, and some updates (e.g. the column
 # highlight on stats tables) land in a second stage ~0.8s later.
 POLL = 0.05                      # seconds between grabs while waiting
-CHANGE_TIMEOUT = 1.2             # no change within this long = the press did nothing
+CHANGE_TIMEOUT = 0.8             # no change within this long = the press did nothing (lag is ~0.2s)
+TAP_HOLD = 0.05                  # burst taps: key held this long...
+TAP_GAP = 0.07                   # ...then released this long before the next
 SETTLE_QUIET = 0.3               # screen must hold still this long to count as settled
 SETTLE_TIMEOUT = 3.0             # give up waiting for stillness after this long
 
@@ -65,6 +67,12 @@ class Stream:
         self.kb.press(key)
         time.sleep(hold)
         self.kb.release(key)
+
+    def tap(self, button: str, times: int):
+        """Quick presses without waiting for the screen between them."""
+        for _ in range(times):
+            self.press(button, hold=TAP_HOLD)
+            time.sleep(TAP_GAP)
 
     def settle(self, frame=None, box=None):
         """Keep grabbing until the screen (or `box`) holds still for SETTLE_QUIET.

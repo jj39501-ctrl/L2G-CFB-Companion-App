@@ -63,10 +63,13 @@ def _stitch_rows(pages: list[list[list[str]]]) -> list[list[str]]:
             if all(_same_row(a, b) for a, b in zip(out[-k:], page[:k])):
                 overlap = k
                 break
-        for i in range(overlap):                       # keep the better-read name of each pair
+        for i in range(overlap):                       # merge each pair read twice
             a, b = out[len(out) - overlap + i], page[i]
             if not fix.NAME.match(a[0]) and fix.NAME.match(b[0]):
                 a[0] = b[0]
+            for j in range(min(len(a), len(b))):       # fill cells one frame couldn't place
+                if not a[j] and b[j]:
+                    a[j] = b[j]
         out.extend(page[overlap:])
     return out
 
@@ -95,6 +98,24 @@ def _align(merged: list[dict], rows: list[list[str]]) -> list[int | None]:
         if out[i] is None and out[i - 1] is not None and out[i + 1] == out[i - 1] + 2:
             out[i] = out[i - 1] + 1
     return out
+
+
+def _conform(result, header: list[str]) -> list[list[str]]:
+    """A frame's rows laid out like the page's majority header. A frame whose header was
+    read with a column more or less (a word split or merged) is mapped column by column
+    by name instead of being dropped, which would leave a gap in the stitched rows."""
+    heads, _, rows, _ = result
+    if len(heads) == len(header):
+        return rows
+    taken, index = set(), []
+    for h in header:
+        j = max((j for j in range(len(heads)) if j not in taken),
+                key=lambda j: difflib.SequenceMatcher(None, heads[j], h).ratio(), default=None)
+        ok = j is not None and difflib.SequenceMatcher(None, heads[j], h).ratio() >= 0.6
+        index.append(j if ok else None)
+        if ok:
+            taken.add(j)
+    return [[r[j] if j is not None and j < len(r) else "" for j in index] for r in rows]
 
 
 def _page_shift(prev: list[str], new: list[str]) -> int:
@@ -146,7 +167,7 @@ def extract_category(folder: Path, pool=None) -> dict:
         # On later column pages the first stat column is always half under NAME/POS.
         hidden = [cut[i] or (c != cols[0] and i == 2) for i in stat]
         shift = _page_shift(prev_heads, [header[i] for i in stat])
-        rows = _stitch_rows([[r for r in by_file[f][2] if len(r) == n] for f in pages])
+        rows = _stitch_rows([_conform(by_file[f], header) for f in pages])
         if merged is None:
             merged = [{"NAME": r[0], "POS": r[1]} for r in rows]
             readings = [[(r[0], r[1])] for r in rows]
@@ -198,3 +219,17 @@ def extract_category(folder: Path, pool=None) -> dict:
         "rows": merged or [],
         "flags": flags,
     }
+
+
+def fill_positions(parts: list[dict]) -> list[dict]:
+    """A position no frame could read is filled from the same player in another category."""
+    known = {}
+    for p in parts:
+        for r in p["rows"]:
+            if r.get("POS") in fix.POSITIONS:
+                known.setdefault(r["NAME"], r["POS"])
+    for p in parts:
+        for r in p["rows"]:
+            if r.get("POS") not in fix.POSITIONS and r["NAME"] in known:
+                r["POS"] = known[r["NAME"]]
+    return parts

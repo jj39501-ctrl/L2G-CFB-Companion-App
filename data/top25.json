@@ -1,7 +1,7 @@
 {
  "screen": "top25",
- "captured_at": "2026-10-11T23:22:28",
- "source": "2026-10-11_230902",
+ "captured_at": "2026-10-12T09:41:03",
+ "source": "2026-10-12_094005",
  "data": [
   {
    "poll": "Media",
@@ -101,7 +101,7 @@
      "last_week": 2,
      "team": "Alabama",
      "first_place_votes": 0,
-     "record": "0-1",
+     "record": "0-2",
      "points": 875,
      "last_game": "L 34-7 vs 1 Ohio State",
      "next_game": "at 18 Notre Dame"
@@ -181,7 +181,7 @@
      "last_week": 9,
      "team": "Notre Dame",
      "first_place_votes": 0,
-     "record": "0-1",
+     "record": "1-1",
      "points": 616,
      "last_game": "L 34-24 vs 7 Florida",
      "next_game": "10 Alabama"
@@ -234,7 +234,7 @@
      "record": "0-1",
      "points": 420,
      "last_game": "L 35-28 vs 16 Penn State",
-     "next_game": "Florida'international"
+     "next_game": "Floridainternational"
     },
     {
      "rank": 24,
