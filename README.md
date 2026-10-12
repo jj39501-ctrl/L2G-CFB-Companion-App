@@ -19,16 +19,17 @@ Conference Standings, Players of the Week, Heisman Watch, Members.
 ## Weekly update
 
 1. Open chiaki-ng, connect to the PS5, maximize the stream, go to the Dynasty hub.
-2. Capture every screen (about 15-20 minutes; hands off the controller):
+2. Double-click `update.bat`, or run:
    ```
-   python -m capture run
+   python tools/publish.py --capture
    ```
-3. Extract and publish (about 5 minutes):
-   ```
-   python tools/publish.py
-   ```
-   This runs `python -m extract`, commits `data/` and pushes; GitHub Pages rebuilds
-   the site. Anything that didn't read cleanly is listed in `data/review.json`.
+   It captures every screen (about 15-20 minutes; hands off the controller), extracts
+   the data (about 5 minutes), commits `data/` and pushes; GitHub Pages then rebuilds
+   https://jj39501-ctrl.github.io/L2G-CFB-Companion-App/ in a minute or two.
+   Anything that didn't read cleanly is listed in `data/review.json`.
+
+Pieces on their own: `python -m capture run [screen ...]` (capture only),
+`python tools/publish.py` (extract the latest captures and publish).
 
 ## Setup (once)
 
