@@ -1,7 +1,7 @@
 {
  "screen": "heisman_watch",
- "captured_at": "2026-10-12T17:17:24",
- "source": "2026-10-12_170058",
+ "captured_at": "2026-10-14T19:05:37",
+ "source": "2026-10-14_184938",
  "data": [
   {
    "rows": [
@@ -10,36 +10,36 @@
      "name": "C.J. Easy",
      "pos": "QB",
      "team": "Oregon",
-     "team_rank": 6,
+     "team_rank": 5,
      "year": "FR",
-     "change": "\u00bb"
+     "change": null
     },
     {
      "place": 2,
-     "name": "Tradarian Ball",
+     "name": "Leati Tatupu",
      "pos": "HB",
-     "team": "Oregon",
-     "team_rank": 6,
-     "year": "so",
+     "team": "Florida",
+     "team_rank": 7,
+     "year": "FR",
      "change": "a"
     },
     {
      "place": 3,
-     "name": "Bo Jackson",
+     "name": "Tradarian Ball",
      "pos": "HB",
-     "team": "Ohio State",
-     "team_rank": 2,
-     "year": "JR",
-     "change": "a"
+     "team": "Oregon",
+     "team_rank": 5,
+     "year": "so",
+     "change": "VW"
     },
     {
      "place": 4,
-     "name": "Jeremiah Smith",
-     "pos": "WR",
-     "team": "Ohio State",
-     "team_rank": 2,
-     "year": "SR",
-     "change": "bof"
+     "name": "Colton Joseph",
+     "pos": "QB",
+     "team": "Boise State",
+     "team_rank": 9,
+     "year": "SR (RS)",
+     "change": "a"
     }
    ]
   }

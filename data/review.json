@@ -1,36 +1,48 @@
 {
  "schedule": [
   {
-   "problem": "unknown team",
-   "read": "ID puke at 4 stanford"
-  },
-  {
-   "problem": "unknown team",
-   "read": "a DB wuse at \u00ab4% 2 Ohio State"
+   "problem": "unreadable matchup",
+   "read": "17 Texas 1 Texas"
   }
  ],
  "top25": [],
  "standings": [
   {
-   "problem": "conference label read as ''; set to 'Big Ten' from drop-down order"
+   "problem": "unknown team",
+   "read": "23 B a"
   }
  ],
  "heisman_watch": [],
- "season_stats": [
-  {
-   "file": "col02",
-   "problem": "105 rows vs 106; 0 couldn't be matched"
-  },
-  {
-   "file": "col02",
-   "problem": "106 rows vs 105; 1 couldn't be matched"
-  }
- ],
+ "season_stats": [],
  "players_of_week": [],
  "members": [
   {
    "problem": "gamertag not in members.txt",
-   "read": "01"
+   "read": "lx"
+  },
+  {
+   "problem": "couldn't work out member's team",
+   "member": "Gilly is papi",
+   "read": null,
+   "candidates": []
+  },
+  {
+   "problem": "couldn't work out member's team",
+   "member": "casherrill1855",
+   "read": "at I Texas",
+   "candidates": []
+  },
+  {
+   "problem": "couldn't work out member's team",
+   "member": "Slow-Mo-Zay",
+   "read": "vs Texas A&M",
+   "candidates": []
+  },
+  {
+   "problem": "couldn't work out member's team",
+   "member": "lx",
+   "read": null,
+   "candidates": []
   }
  ]
 }

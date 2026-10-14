@@ -1,318 +1,318 @@
 {
  "screen": "players_of_week",
- "captured_at": "2026-10-12T17:17:24",
- "source": "2026-10-12_170058",
+ "captured_at": "2026-10-14T19:05:37",
+ "source": "2026-10-14_184938",
  "data": [
   {
    "scope": "National",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Dijon Lee Jre",
-    "pos": "CB",
-    "number": 5,
-    "game": "at 11 Notre Dame (L 41-35)",
-    "result": {
-     "outcome": "L",
-     "score": "41-35"
-    },
-    "stats": "5 TKL, 1 TFL, 1 INT, 3 PBU"
-   },
-   "offensive": {
-    "name": "C.J. Easy",
-    "pos": "QB",
-    "number": 2,
-    "game": "vs FCS East (W 88-3)",
+    "name": "Zack Harden",
+    "pos": "SS",
+    "number": 4,
+    "game": "at Missouri State (W 66-14)",
     "result": {
      "outcome": "W",
-     "score": "88-3"
+     "score": "66-14"
     },
-    "stats": "18-24, 553 PASS YDS, 23.0 YPA, 8 PASS TD, 1 INT, 18 CAR, 118 RUSH YDS, 2 RUSH TD"
+    "stats": "8 TKL, 1 INT, 1 PBU, 1 FF"
+   },
+   "offensive": {
+    "name": "Leati Tatupu",
+    "pos": "HB",
+    "number": 8,
+    "game": "vs FCS Midwest (W 80-10)",
+    "result": {
+     "outcome": "W",
+     "score": "80-10"
+    },
+    "stats": "13 CAR, 511 RUSH YDS, 39.3 AVG, 8 RUSH, 2 REC, 15 REC YDS, 7.5 AVG"
    }
   },
   {
    "scope": "ACC",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Quentin Reddish",
+    "name": "Miquel Dingle Jre",
     "pos": "SS",
-    "number": 18,
-    "game": "vs FCS Northwest (W 48-7)",
+    "number": 21,
+    "game": "at Virginia Tech (L 32-30)",
     "result": {
-     "outcome": "W",
-     "score": "48-7"
+     "outcome": "L",
+     "score": "32-30"
     },
-    "stats": "4 TKL, 1 TFL, 2 PBU, 1 FF"
+    "stats": "6 TKL, 2 PBU, 1 FF, 2 FR"
    },
    "offensive": {
-    "name": "C.J. Easy",
-    "pos": "QB",
-    "number": 2,
-    "game": "vs FCS East (W 88-3)",
+    "name": "Leati Tatupu",
+    "pos": "HB",
+    "number": 8,
+    "game": "vs FCS Midwest (W 80-10)",
     "result": {
      "outcome": "W",
-     "score": "88-3"
+     "score": "80-10"
     },
-    "stats": "18-24, 553 PASS YDS, 23.0 YPA, 8 PASS TD, 1 INT, 18 CAR, 118 RUSH YDS, 2 RUSH TD"
+    "stats": "13 CAR, 511 RUSH YDS, 39.3 AVG, 8 RUSH, 2 REC, 15 REC YDS, 7.5 AVG"
    }
   },
   {
    "scope": "American",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Darius Malcolm Jr.",
+    "name": "Kevon Merrell",
     "pos": "CB",
-    "number": 7,
-    "game": "vs FCS West (W 41-3)",
+    "number": 4,
+    "game": "vs Appalachian State (L 38-10)",
     "result": {
-     "outcome": "W",
-     "score": "41-3"
+     "outcome": "L",
+     "score": "38-10"
     },
-    "stats": "7 TKL, 2 INT, 1 PBU"
+    "stats": "6 TKL, 1 INT, 1 PBU, 1 FF"
    },
    "offensive": {
-    "name": "Talyn Shettron",
-    "pos": "WR",
-    "number": 17,
-    "game": "at Florida Atlantic (W 45-41)",
+    "name": "Michael Van Buren Jr.",
+    "pos": null,
+    "number": 3,
+    "game": "at Jacksonville State (W 48-17)",
     "result": {
      "outcome": "W",
-     "score": "45-41"
+     "score": "48-17"
     },
-    "stats": "9 REC, 94 REC YDS, 10.4 AVG, 3 RECTD"
+    "stats": "24-32, 377 PASS YDS, 11.8 YPA, 4 PASS TD, 1 INT, 13 CAR, 86 RUSH YDS, 2 RUSH TD"
    }
   },
   {
    "scope": "Big 12",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Brandon Jones",
-    "pos": "SS",
-    "number": 1,
-    "game": "vs UTEP (W 38-28)",
+    "name": "Jacob Redding",
+    "pos": "FS",
+    "number": 38,
+    "game": "vs FCS Midwest (W 24-3)",
     "result": {
      "outcome": "W",
-     "score": "38-28"
+     "score": "24-3"
     },
-    "stats": "12 TKL, 1 TFL, 1 PBU, 1 FF"
+    "stats": "4 TKL, 1 TFL, 2 INT"
    },
    "offensive": {
-    "name": "Bear Bachmeier",
-    "pos": null,
-    "number": 47,
-    "game": "vs FCS Midwest (W 49-3)",
+    "name": "Keyjuan Brown",
+    "pos": "HB",
+    "number": 5,
+    "game": "vs UCF (W 28-13)",
     "result": {
      "outcome": "W",
-     "score": "49-3"
+     "score": "28-13"
     },
-    "stats": "19-29, 239 PASS YDS, 8.2 YPA, 1 PASS TD, 5 CAR, 90 RUSH YDS, 4 RUSH TD"
+    "stats": "11 CAR, 198 RUSH YDS, 18.0 AVG, 2 RUSH TD, 1 REC, 10 REC YDS, 10.0 AVG"
    }
   },
   {
    "scope": "Big Ten",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Desman Stephens 11",
-    "pos": "MIKE",
-    "number": 8,
-    "game": "at Iowa State (L 42-25)",
+    "name": "Jayden Jackson",
+    "pos": "DT",
+    "number": 65,
+    "game": "at SMU (L 48-24)",
     "result": {
      "outcome": "L",
-     "score": "42-25"
+     "score": "48-24"
     },
-    "stats": "7 TKL, 1 INT, 1 PBU, 1 FF"
+    "stats": "3 TKL, 2.5 SACKS, 3 TFL, 2 PBU"
    },
    "offensive": {
-    "name": "Terry Walker III",
+    "name": "Demond Williams Jre",
     "pos": null,
-    "number": 13,
-    "game": "vs San Diego State (W 41-23)",
+    "number": 1,
+    "game": "vs Washington State (W 49-26)",
     "result": {
      "outcome": "W",
-     "score": "41-23"
+     "score": "49-26"
     },
-    "stats": "17-30, 250 PASS YDS, 8.3 YPA, 3 PASS TD, 12 CAR, 139 RUSH YDS, 2 RUSH TD"
+    "stats": "33-36, 499 PASS YDS, 13.9 YPA,, 6 CAR, 5 RUSH YDS, 1 RUSH TD"
    }
   },
   {
    "scope": "CUSA",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Anta'Veon Mckenzie",
-    "pos": "FS",
-    "number": 13,
-    "game": "vs (JAB (W 29-10)",
+    "name": "Zack Harden",
+    "pos": "SS",
+    "number": 4,
+    "game": "at Missouri State (W 66-14)",
     "result": {
      "outcome": "W",
-     "score": "29-10"
+     "score": "66-14"
     },
-    "stats": "7 TKL, 1 TFL, 3 PBU"
+    "stats": "8 TKL, 1 INT, 1 PBU, 1 FF"
    },
    "offensive": {
-    "name": "Isaiah Fuhrmann",
-    "pos": "WR",
-    "number": 0,
-    "game": "vs FCS Midwest (W 29-28)",
+    "name": "COLSON 20-30, 236 Pass Yds, 7.9 Ypa, 4 Pass Td",
+    "pos": null,
+    "number": 16,
+    "game": "at Missouri State (W 66-14)",
     "result": {
      "outcome": "W",
-     "score": "29-28"
+     "score": "66-14"
     },
-    "stats": "12 REC, 147 REC YDS, 12.3 AVG, 2 REC TD"
+    "stats": "20-30, 236 PASS YDS, 7.9 YPA, 4 PASS TD, 6 CAR, 138 RUSH YDS, 2 RUSH TD"
    }
   },
   {
    "scope": "Independent",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Rylan Barnes",
-    "pos": "SAM",
-    "number": null,
-    "game": "vs Iowa (W 42-25)",
+    "name": "Messiah Tilson",
+    "pos": "SS",
+    "number": 18,
+    "game": "vs Bowling Green (W 20-10)",
     "result": {
      "outcome": "W",
-     "score": "42-25"
+     "score": "20-10"
     },
-    "stats": "12 TKL, 2 TFL, 1 PBU, 1 FF"
+    "stats": "6 TKL, 1 INT, 1 FF, 2 FR"
    },
    "offensive": {
-    "name": "Zane Flores",
-    "pos": null,
-    "number": 6,
-    "game": "vs Iowa (W 42-25)",
+    "name": "Brodie Mcwhorter",
+    "pos": "QB",
+    "number": 1,
+    "game": "vs FCS Midwest (W 55-7)",
     "result": {
      "outcome": "W",
-     "score": "42-25"
+     "score": "55-7"
     },
-    "stats": "16-24, 260 PASS YDS, 10.8 YPA, 2 PASS TD, 1 INT, 13 CAR, 72 RUSH YDS, 3 RUSH TD"
+    "stats": "23-37, 404 PASS YDS, 10.9 YPA, 5 PASS TD, 5 CAR, 64 RUSH YDS, 1 RUSH TD"
    }
   },
   {
    "scope": "MAC",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Andrew Zock",
-    "pos": "REDG",
-    "number": 0,
-    "game": "at 4 South Carolina (L 32-13)",
+    "name": "Toney Coleman Jr.",
+    "pos": null,
+    "number": 21,
+    "game": "vs Northwestern (L 24-20)",
     "result": {
      "outcome": "L",
-     "score": "32-13"
+     "score": "24-20"
     },
-    "stats": "4 TKL, 3 SACKS, 3 TFL, 1 INT, 1 FR"
+    "stats": "7 TKL, 2 INT"
    },
    "offensive": {
-    "name": "Dwayne Early Jr.-",
-    "pos": "WR",
-    "number": 1,
-    "game": "vs FCS West (W 34-13)",
+    "name": "Juan Mcdougal",
+    "pos": null,
+    "number": null,
+    "game": "vs FCS Northwest (W 29-14)",
     "result": {
      "outcome": "W",
-     "score": "34-13"
+     "score": "29-14"
     },
-    "stats": "6 REC, 60 REC YDS, 10.0 AVG, 2 RECTD"
+    "stats": "5 REC, 54 REC YDS, 10.8 AVG, 2 RECTD"
    }
   },
   {
    "scope": "MW",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Jack Murray",
+    "name": "Keagan Ruane-Martino",
     "pos": null,
-    "number": null,
-    "game": "at Southern Mississippi (W 31-26)",
+    "number": 22,
+    "game": "vs Kent State (W 29-13)",
     "result": {
      "outcome": "W",
-     "score": "31-26"
+     "score": "29-13"
     },
-    "stats": "11 TKL, 1 SACKS, 1 TFL, 2 PBU"
+    "stats": "4 TKL, 1 INT, 1 PBU, 1 FF"
    },
    "offensive": {
-    "name": "Rafeald Campbell",
-    "pos": "WR",
-    "number": 18,
-    "game": "at Houston (L 38-28)",
+    "name": "Gio Lopez",
+    "pos": "QB",
+    "number": null,
+    "game": "vs FCS West (W 34-31)",
     "result": {
-     "outcome": "L",
-     "score": "38-28"
+     "outcome": "W",
+     "score": "34-31"
     },
-    "stats": "12 REC, 154 REC YDS, 12.8 AVG, 1 RECTD"
+    "stats": "26-41, 311 PASS YDS, 7.6 YPA, 1 PASS TD, 11 CAR, 78 RUSH YDS, 3 RUSH TD"
    }
   },
   {
    "scope": "Pac-12",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Mataira Brown",
-    "pos": null,
-    "number": null,
-    "game": "vs Virginia Tech (W 31-17)",
+    "name": "Dagan Myers",
+    "pos": "FS",
+    "number": 3,
+    "game": "vs Georgia State (L 35-30)",
     "result": {
-     "outcome": "W",
-     "score": "31-17"
+     "outcome": "L",
+     "score": "35-30"
     },
-    "stats": "5 TKL, 1 PBU, 1 FF, 2 FR"
+    "stats": "8 TKL, 1 INT, 2 PBU"
    },
    "offensive": {
-    "name": "Xavier Owens",
-    "pos": null,
-    "number": null,
-    "game": "at South Alabama (W 28-19)",
+    "name": "Colton Joseph",
+    "pos": "QB",
+    "number": 9,
+    "game": "vs FCS East (W 33-21)",
     "result": {
      "outcome": "W",
-     "score": "28-19"
+     "score": "33-21"
     },
-    "stats": "11 REC, 167 REC YDS, 15.2 AVG, 2 RECTD"
+    "stats": "24-36, 309 PASS YDS, 8.6 YPA, 2 PASS TD, 15 CAR, 83 RUSH YDS, 2 RUSH TD"
    }
   },
   {
    "scope": "SEC",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Dijon Lee Jr.",
-    "pos": "CB",
-    "number": 5,
-    "game": "at 11 Notre Dame (L 41-35)",
-    "result": {
-     "outcome": "L",
-     "score": "41-35"
-    },
-    "stats": "5 TKL, 1 TFL, 1 INT, 3 PBU"
-   },
-   "offensive": {
-    "name": "Jonaz Walton",
-    "pos": "HB",
-    "number": 20,
-    "game": "vs 14 Alabama (W 41-35)",
+    "name": "Adon Shuler",
+    "pos": "SS",
+    "number": 8,
+    "game": "at 13 LSU (W 38-17)",
     "result": {
      "outcome": "W",
-     "score": "41-35"
+     "score": "38-17"
     },
-    "stats": "12 CAR, 176 RUSH YDS, 14.7 AVG, 3 RUSH TD, 5 REC, 63 REC YDS, 12.6 AVG"
+    "stats": "2 TKL, 1 TFL, 3 INT"
+   },
+   "offensive": {
+    "name": "Bryce Baker",
+    "pos": "QB",
+    "number": 22,
+    "game": "at 25 Michigan (W 42-28)",
+    "result": {
+     "outcome": "W",
+     "score": "42-28"
+    },
+    "stats": "22-27, 247 PASS YDS, 9.1 YPA, 2 PASS TD, 12 CAR, 114 RUSH YDS, 3 RUSH TD"
    }
   },
   {
    "scope": "Sun Belt",
-   "week": "Season Week 2",
+   "week": "Season Week 3",
    "defensive": {
-    "name": "Azarel Juste",
+    "name": "Jshawn Frausto-Ramos",
     "pos": "SS",
-    "number": 23,
-    "game": "vs FCS East (W 34-7)",
+    "number": 3,
+    "game": "at Iowa State (L 38-30)",
     "result": {
-     "outcome": "W",
-     "score": "34-7"
+     "outcome": "L",
+     "score": "38-30"
     },
     "stats": "7 TKL, 2 INT, 1 PBU"
    },
    "offensive": {
-    "name": "Ajani Sheppard",
-    "pos": "QB",
-    "number": 11,
-    "game": "vs FCS Southeast (W 52-24)",
+    "name": "John Lawless",
+    "pos": null,
+    "number": null,
+    "game": "at Colorado State (W 35-30)",
     "result": {
      "outcome": "W",
-     "score": "52-24"
+     "score": "35-30"
     },
-    "stats": "14-19, 224 PASS YDS, 11.8 YPA, 2 PASS TD, 9 CAR, 61 RUSH YDS, 2 RUSH"
+    "stats": "10 REC, 165 REC YDS, 16.5 AVG, 1 RECTD"
    }
   }
  ]

@@ -1,124 +1,127 @@
 {
  "screen": "members",
- "captured_at": "2026-10-12T17:17:24",
- "source": "2026-10-12_170058",
+ "captured_at": "2026-10-14T19:05:37",
+ "source": "2026-10-14_184938",
  "data": [
   {
    "rows": [
     {
      "gamertag": "Armtesttom3",
-     "team_rank": 5,
-     "game": "vs Notre Dame",
+     "team_rank": 13,
+     "game": "vs 25 Michigan",
      "progress": "70/960",
      "team": "LSU",
-     "opponent": "Notre Dame",
+     "opponent": "Michigan",
      "home": true
     },
     {
      "gamertag": "Gilly is papi",
-     "team_rank": 1,
-     "game": "vs Texas A&M",
+     "team_rank": null,
+     "game": null,
      "progress": "960/960",
-     "team": "Alabama",
-     "opponent": "Texas A&M",
-     "home": true
+     "team": null
     },
     {
-     "gamertag": "01",
-     "team_rank": 1,
-     "game": "at Arkansas",
-     "progress": "70/750",
-     "team": "Georgia",
-     "opponent": "Arkansas",
-     "home": false
+     "gamertag": "RichRichie5743",
+     "team_rank": 2,
+     "game": null,
+     "progress": "5/750",
+     "team": "Georgia"
     },
     {
      "gamertag": "Nightfalconn",
-     "team_rank": 18,
-     "game": "vs South Carolina",
-     "progress": "65/900",
-     "team": "Michigan",
-     "opponent": "South Carolina",
-     "home": true
-    },
-    {
-     "gamertag": "Swarmin26Hornets",
-     "team_rank": 8,
-     "game": "vs 3 Texas",
-     "progress": "1050/1050",
-     "team": "Miami",
-     "opponent": "Texas",
-     "home": true
-    },
-    {
-     "gamertag": "casherrill1855",
-     "team_rank": 12,
-     "game": "at Alabama",
-     "progress": "70/845",
-     "team": "Texas A&M",
-     "opponent": "Alabama",
-     "home": false
-    },
-    {
-     "gamertag": "Slow-Mo-Zay",
-     "team_rank": 3,
-     "game": "at 8 Miami",
-     "progress": "355/1050",
-     "team": "Texas",
-     "opponent": "Miami",
-     "home": false
-    },
-    {
-     "gamertag": "germanagus_2",
-     "team_rank": 7,
-     "game": "vs FCS Midwest",
-     "progress": "780/780",
-     "team": "Florida",
-     "opponent": "FCS Midwest",
-     "home": true
-    },
-    {
-     "gamertag": "GoatestofAllTime",
-     "team_rank": 6,
-     "game": "vs Oregon State",
-     "progress": "560/1050",
-     "team": "Oregon",
-     "opponent": "Oregon State",
-     "home": true
-    },
-    {
-     "gamertag": "Og_laffy7",
-     "team_rank": 2,
-     "game": null,
-     "progress": "85/800",
-     "team": "Ohio State"
-    },
-    {
-     "gamertag": "NUEVE4413",
-     "team_rank": 11,
+     "team_rank": 25,
      "game": "at LSU",
-     "progress": "25/975",
-     "team": "Notre Dame",
+     "progress": "40/900",
+     "team": "Michigan",
      "opponent": "LSU",
      "home": false
     },
     {
+     "gamertag": "Swarmin26Hornets",
+     "team_rank": 12,
+     "game": "at 2 Georgia",
+     "progress": "1050/1050",
+     "team": "Miami",
+     "opponent": "Georgia",
+     "home": false
+    },
+    {
+     "gamertag": "casherrill1855",
+     "team_rank": 17,
+     "game": "at I Texas",
+     "progress": "0/845",
+     "team": null,
+     "opponent": "Texas"
+    },
+    {
+     "gamertag": "Slow-Mo-Zay",
+     "team_rank": 1,
+     "game": "vs Texas A&M",
+     "progress": "315/1050",
+     "team": null,
+     "opponent": "Texas A&M"
+    },
+    {
+     "gamertag": "germanagus_2",
+     "team_rank": 7,
+     "game": "W 144-141 at Indiana",
+     "progress": "0/780",
+     "team": "Florida",
+     "opponent": "Indiana",
+     "home": false
+    },
+    {
+     "gamertag": "GoatestofAllTime",
+     "team_rank": 5,
+     "game": "vs 15 Syracuse",
+     "progress": "520/1050",
+     "team": "Oregon",
+     "opponent": "Syracuse",
+     "home": true
+    },
+    {
+     "gamertag": "Og_laffy7",
+     "team_rank": 3,
+     "game": "at Florida State",
+     "progress": "85/800",
+     "team": "Ohio State",
+     "opponent": "Florida State",
+     "home": false
+    },
+    {
+     "gamertag": "NUEVE4413",
+     "team_rank": 6,
+     "game": "W 77-31 at Auburn",
+     "progress": "0/975",
+     "team": "Notre Dame",
+     "opponent": "Auburn",
+     "home": false
+    },
+    {
      "gamertag": "GrandeJefe21",
-     "team_rank": null,
-     "game": "at 2 Ohio State",
+     "team_rank": 24,
+     "game": "at 19 Oklahoma",
      "progress": "500/1050",
-     "team": "a DB wuse",
-     "opponent": "Ohio State",
+     "team": "USC",
+     "opponent": "Oklahoma",
      "home": false
     },
     {
      "gamertag": "Roljor",
      "team_rank": 4,
-     "game": "at 18 Michigan",
-     "progress": "75/550",
+     "game": "W 64-35 vs Arkansas",
+     "progress": "0/550",
      "team": "South Carolina",
-     "opponent": "Michigan",
-     "home": false
+     "opponent": "Arkansas",
+     "home": true
+    },
+    {
+     "gamertag": "lx",
+     "team_rank": null,
+     "game": null,
+     "progress": "0/975",
+     "team": null
     }
    ]
   }
